@@ -31,7 +31,8 @@ jobs:
         image_flavor: [main, nvidia]
         base_name: [ublue-stoeps]
         major_version: [39]
-        recipe: recipe.yml
+        recipe: 
+          - recipe.yml
         include:
           - major_version: 39
             is_latest_version: true
