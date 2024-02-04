@@ -1,0 +1,137 @@
+# image will be published to ghcr.io/<user>/<name>
+name: ublue-stoeps
+# description will be included in the image's metadata
+description: My ublue image for my personal and working devices
+
+base-image: ghcr.io/ublue-os/silverblue-nvidia
+image-version: 39 # latest is also supported if you want new updates ASAP
+
+modules:
+  - type: files
+    files:
+      - usr: /usr # copy static configurations
+
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-"${FEDORA_MAJO      R_VERSION}"/che-nerd-fonts-fedora-"${FEDORA_MAJOR_VERSION}".repo
+      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    install:
+      - dbus-x11
+      - edk2-ovmf
+      - epson-inject-printer-escpr2
+      - fd-find
+      - firewall-config
+      - fzf
+      - gcc
+      - gcc-c++
+      - genisoimage
+      - guestfs-tools
+      - isync
+      - kernel-devel
+      - libvirt
+      - libvirt-nss
+      - make
+      - nerdfonts
+      - notmuch
+      - pass
+      - podman-compose
+      - podman-plugins
+      - podmansh
+      - powerline-fonts
+      - python-libvirt
+      - qemu
+      - qemu-char-spice
+      - qemu-device-display-virtio-gpu
+      - qemu-device-display-virtio-vga
+      - qemu-device-usb-redirect
+      - qemu-img
+      - qemu-system-x86-core
+      - qemu-user-binfmt
+      - qemu-user-static
+      - stow
+      - tmux
+      - vdirsyncer
+      - vim
+      - virt-install
+      - virt-manager
+      - virt-viewer
+    remove:
+      - firefox
+      - firefox-langpacks
+      - gnome-software-rpm-ostree
+      - gnome-tour
+
+  - type: default-flatpaks
+    notify: true
+    system:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      install:
+        - com.bitwarden.desktop
+        - com.calibre_ebook.calibre
+        - com.discordapp.Discord
+        - com.github.IsmaelMartinez.teams_for_linux
+        - com.github.micahflee.torbrowser-launcher
+        - com.github.tchx84.Flatseal
+        - com.github.zocker_160.SyncThingy
+        - com.google.Chrome
+        - com.jgraph.drawio.desktop
+        - com.logseq.Logseq
+        - com.mattjakeman.ExtensionManager
+        - com.obsproject.Studio
+        - com.raggesilver.BlackBox
+        - im.riot.Riot
+        - io.dbeaver.DBeaverCommunity
+        - io.github.aandrew_me.ytdn
+        - io.github.celluloid_player.Celluloid
+        - io.github.fabrialberio.pinapp
+        - io.github.JaGoLi.ytdl_gui
+        - io.github.java_decompiler.jd-gui
+        - io.github.realmazharhussain.GdmSettings
+        - io.missioncenter.MissionCenter
+        - io.podman_desktop.PodmanDesktop
+        - org.blender.Blender
+        - org.cockpit_project.CockpitClient
+        - org.cryptomator.Cryptomator
+        - org.davmail.DavMail
+        - org.fedoraproject.MediaWriter
+        - org.flameshot.Flameshot
+        - org.gimp.GIMP
+        - org.gnome.baobab
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.gnome.clocks
+        - org.gnome.Connections
+        - org.gnome.Contacts
+        - org.gnome.DejaDup
+        - org.gnome.Evince
+        - org.gnome.font-viewer
+        - org.gnome.Logs
+        - org.gnome.Loupe
+        - org.gnome.Maps
+        - org.gnome.meld
+        - org.gnome.NautilusPreviewer
+        - org.gnome.TextEditor
+        - org.gnome.Weather
+        - org.gustavoperedo.FontDownloader
+        - org.inkscape.Inkscape
+        - org.libreoffice.LibreOffice
+        - org.localsend.localsend_app
+        - org.mozilla.firefox
+        - org.mozilla.Thunderbird
+        - us.zoom.Zoom
+      remove:
+      # - org.gnome.eog
+      #
+    # A flatpak repo can also be added without having to install flatpaks,
+    # as long as one of the repo- fields is present
+    user:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+
+  - type: script
+    scripts:
+      # this sets up the proper policy & signing files for signed images to work
+      - signing.sh
+      - workaround.sh
