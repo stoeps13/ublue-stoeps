@@ -1,28 +1,21 @@
-# This workflow builds every branch of the repository daily at 16:30 UTC, one hour after ublue-os/nvidia builds.
-# The images are also built after pushing changes or pull requests.
-# The builds can also be triggered manually in the Actions tab thanks to workflow dispatch.
-# Only the branch called `live` is published.
-
-
-name: build-ublue
+name: build-ublue-sway
 on: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
   schedule:
-    - cron: "30 16 * * *"
+    - cron: '30 16 * * *'
   push:
     branches:
-      - live
-      - template
       - main
     paths-ignore: # don't rebuild if only documentation has changed
-      - "**.md"
+      - '**.md'
   pull_request:
   workflow_dispatch:
 
 env:
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
-# Only deploys the branch named "live". Ignores all other branches, to allow
-# having "development" branches without interfering with GHCR image uploads.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+
 jobs:
   push-ghcr:
     name: Build and push image
@@ -35,12 +28,15 @@ jobs:
       fail-fast: false
 
       matrix:
-# !!!
-        # Add recipes for all the images you want to build here.
-        # Don't add module configuration files, you will get errors.
-        recipe:
-          - recipe.yml
-# !!!
+        image_flavor: [main, nvidia]
+        base_name: [ublue-sway]
+        major_version: [39]
+        include:
+          - major_version: 39
+            is_latest_version: true
+            is_stable_version: true
+            is_gts_version: false
+    # !!!
 
     steps:
       # Checkout push-to-registry action GitHub repository
@@ -49,13 +45,13 @@ jobs:
 
       # Confirm that cosign.pub matches SIGNING_SECRET
       - uses: sigstore/cosign-installer@v3.3.0
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
 
       - name: Check SIGNING_SECRET matches cosign.pub
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         env:
           COSIGN_EXPERIMENTAL: false
-          COSIGN_PASSWORD: ""
+          COSIGN_PASSWORD: ''
           COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}
         shell: bash
         run: |
@@ -68,6 +64,9 @@ jobs:
             echo "$delta"
             exit 1
           fi
+
+      - name: Maximize build space
+        uses: ublue-os/remove-unwanted-software@v6
 
       - name: Add yq (for reading recipe.yml)
         uses: mikefarah/yq@v4.40.5
