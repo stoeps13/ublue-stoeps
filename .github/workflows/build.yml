@@ -1,4 +1,4 @@
-name: build-ublue-sway
+name: build-ublue-stoeps
 on: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
   schedule:
     - cron: '30 16 * * *'
@@ -29,7 +29,7 @@ jobs:
 
       matrix:
         image_flavor: [main, nvidia]
-        base_name: [ublue-sway]
+        base_name: [ublue-stoeps]
         major_version: [39]
         recipe: recipe.yml
         include:
