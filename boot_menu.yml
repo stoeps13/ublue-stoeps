@@ -1,5 +1,15 @@
 ublue_variants:
-  - label: ublue-os/startingpoint
+  - label: stoeps13/ublue-stoeps-main
     ks: /kickstart/ublue-os.ks
     flavors:
-      - label: startingpoint
+      - label: ublue-stoeps
+        info: ublue-stoeps
+  - label: stoeps13/ublue-stoeps-nvidia
+    ks: /kickstart/ublue-stoeps-nvidia.ks
+    subvariants:
+      - label: latest driver
+      - label: 470xx driver
+        suffix: -470
+    flavors:
+      - label: ublue-stoeps-nvidia
+        info: ublue-stoeps-nvidia
