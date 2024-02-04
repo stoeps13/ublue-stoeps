@@ -31,6 +31,7 @@ jobs:
         image_flavor: [main, nvidia]
         base_name: [ublue-sway]
         major_version: [39]
+        recipe: recipe.yml
         include:
           - major_version: 39
             is_latest_version: true
