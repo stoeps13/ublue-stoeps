@@ -1,6 +1,7 @@
 #!/bin/sh
 
 set -oeux pipefail
+echo 'This is the workaround shell script'
 
 # alternatives cannot create symlinks on its own during a container build
 ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/bin/ld
