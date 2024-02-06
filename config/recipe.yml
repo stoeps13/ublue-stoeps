@@ -21,7 +21,6 @@ modules:
     install:
       - dbus-x11
       - edk2-ovmf
-      - epson-inject-printer-escpr2
       - fd-find
       - firewall-config
       - fzf
@@ -34,7 +33,6 @@ modules:
       - libvirt
       - libvirt-nss
       - make
-      - nerdfonts
       - notmuch
       - pass
       - podman-compose
@@ -58,6 +56,8 @@ modules:
       - virt-install
       - virt-manager
       - virt-viewer
+      # - epson-inject-printer-escpr2
+      # - nerdfonts
     remove:
       - firefox
       - firefox-langpacks
