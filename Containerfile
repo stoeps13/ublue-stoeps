@@ -24,13 +24,13 @@ COPY cosign.pub /usr/share/ublue-os/cosign.pub
 
 # Copy build scripts & configuration
 COPY build.sh /tmp/build.sh
-COPY config /tmp/config/
+ADD config /tmp/config/
 
 # Copy modules
 # The default modules are inside ublue-os/bling
 COPY --from=ghcr.io/ublue-os/bling:latest /modules /tmp/modules/
 # Custom modules overwrite defaults
-COPY modules /tmp/modules/
+ADD modules /tmp/modules/
 
 # `yq` is used for parsing the yaml configuration
 # It is copied from the official container image since it's not available as an RPM.
