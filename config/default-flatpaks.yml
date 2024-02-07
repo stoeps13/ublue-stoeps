@@ -1,0 +1,68 @@
+type: default-flatpaks
+notify: true
+system:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  repo-name: flathub
+  install:
+    - com.bitwarden.desktop
+    - com.calibre_ebook.calibre
+    - com.discordapp.Discord
+    - com.github.IsmaelMartinez.teams_for_linux
+    - com.github.micahflee.torbrowser-launcher
+    - com.github.tchx84.Flatseal
+    - com.github.zocker_160.SyncThingy
+    - com.google.Chrome
+    - com.jgraph.drawio.desktop
+    - com.logseq.Logseq
+    - com.mattjakeman.ExtensionManager
+    - com.obsproject.Studio
+    - com.raggesilver.BlackBox
+    - im.riot.Riot
+    - io.dbeaver.DBeaverCommunity
+    - io.github.aandrew_me.ytdn
+    - io.github.celluloid_player.Celluloid
+    - io.github.fabrialberio.pinapp
+    - io.github.JaGoLi.ytdl_gui
+    - io.github.java_decompiler.jd-gui
+    - io.github.realmazharhussain.GdmSettings
+    - io.missioncenter.MissionCenter
+    - io.podman_desktop.PodmanDesktop
+    - org.blender.Blender
+    - org.cockpit_project.CockpitClient
+    - org.cryptomator.Cryptomator
+    - org.davmail.DavMail
+    - org.fedoraproject.MediaWriter
+    - org.flameshot.Flameshot
+    - org.gimp.GIMP
+    - org.gnome.baobab
+    - org.gnome.Calculator
+    - org.gnome.Calendar
+    - org.gnome.Characters
+    - org.gnome.clocks
+    - org.gnome.Connections
+    - org.gnome.Contacts
+    - org.gnome.DejaDup
+    - org.gnome.Evince
+    - org.gnome.font-viewer
+    - org.gnome.Logs
+    - org.gnome.Loupe
+    - org.gnome.Maps
+    - org.gnome.meld
+    - org.gnome.NautilusPreviewer
+    - org.gnome.TextEditor
+    - org.gnome.Weather
+    - org.gustavoperedo.FontDownloader
+    - org.inkscape.Inkscape
+    - org.libreoffice.LibreOffice
+    - org.localsend.localsend_app
+    - org.mozilla.firefox
+    - org.mozilla.Thunderbird
+    - us.zoom.Zoom
+  remove:
+  # - org.gnome.eog
+  #
+# A flatpak repo can also be added without having to install flatpaks,
+# as long as one of the repo- fields is present
+user:
+  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  repo-name: flathub
