@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -oeux pipefail
+set -oue pipefail
 echo 'This is the workaround shell script'
 
 # alternatives cannot create symlinks on its own during a container build
