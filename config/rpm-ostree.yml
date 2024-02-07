@@ -6,27 +6,40 @@ repos:
   - https://copr.fedorainfracloud.org/coprs/kylegospo/gnome-vrr/repo/fedora-%OS_VERSION%/kylegospo-gnome-vrr-fedora-%OS_VERSION%.repo
   # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
 install:
+  - alacritty
+  - containerd.io
   - dbus-x11
+  - devpod
+  - docker-ce
+  - docker-ce-cli
+  - docker-compose-plugin
   - edk2-ovmf
+  - epson-inject-printer-escpr2
   - fd-find
   - firewall-config
   - fzf
   - gcc
   - gcc-c++
   - genisoimage
+  - gnome-shell-extension-appindicator
+  - gnome-shell-extension-blur-my-shell
+  - gnome-shell-extension-dash-to-dock
+  - gnome-shell-extension-gsconnect
+  - gnome-shell-extension-logo-menu
   - guestfs-tools
   - isync
   - kernel-devel
   - libvirt
   - libvirt-nss
   - make
+  - nerdfonts
   - notmuch
   - pass
   - podman-compose
   - podman-plugins
   - podmansh
   - powerline-fonts
-  - python-libvirt
+  - python3-libvirt
   - qemu
   - qemu-char-spice
   - qemu-device-display-virtio-gpu
@@ -43,10 +56,10 @@ install:
   - virt-install
   - virt-manager
   - virt-viewer
-  # - epson-inject-printer-escpr2
-  # - nerdfonts
+  - zsh
 remove:
   - firefox
   - firefox-langpacks
+  - gnome-extensions-app
   - gnome-software-rpm-ostree
   - gnome-tour

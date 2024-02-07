@@ -43,3 +43,12 @@ COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms /tmp/rpms
 RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
     rm -rf /tmp/* /var/* && ostree container commit
 
+# Add some container binaries
+COPY --from=cgr.dev/chainguard/dive:latest /usr/bin/dive /usr/bin/dive
+COPY --from=cgr.dev/chainguard/flux:latest /usr/bin/flux /usr/bin/flux
+COPY --from=cgr.dev/chainguard/helm:latest /usr/bin/helm /usr/bin/helm
+COPY --from=cgr.dev/chainguard/ko:latest /usr/bin/ko /usr/bin/ko
+COPY --from=cgr.dev/chainguard/minio-client:latest /usr/bin/mc /usr/bin/mc
+COPY --from=cgr.dev/chainguard/kubectl:latest /usr/bin/kubectl /usr/bin/kubectl
+
+
