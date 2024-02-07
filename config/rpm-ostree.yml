@@ -60,6 +60,5 @@ install:
 remove:
   - firefox
   - firefox-langpacks
-  - gnome-extensions-app
   - gnome-software-rpm-ostree
   - gnome-tour
