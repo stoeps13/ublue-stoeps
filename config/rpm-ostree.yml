@@ -10,7 +10,6 @@ install:
   - dbus-x11
   - devpod
   - edk2-ovmf
-  - epson-inject-printer-escpr2
   - fd-find
   - firewall-config
   - fzf
