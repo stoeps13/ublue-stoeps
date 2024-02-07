@@ -13,16 +13,10 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /usr/lib | grep vdirsyncer)
 
 # Set up services
-systemctl enable docker.socket
 systemctl enable podman.socket
 
 # Clean up repos, everything is on the image so we don't need them
-rm -f /etc/yum.repos.d/ublue-os-staging-fedora-"${FEDORA_MAJOR_VERSION}".repo 
-rm -f /etc/yum.repos.d/ganto-lxc4-fedora-"${FEDORA_MAJOR_VERSION}".repo 
-rm -f /etc/yum.repos.d/karmab-kcli-fedora-"${FEDORA_MAJOR_VERSION}".repo 
-rm -f /etc/yum.repos.d/atim-ubuntu-fonts-fedora-"${FEDORA_MAJOR_VERSION}".repo 
-rm -f /etc/yum.repos.d/vscode.repo 
-rm -f /etc/yum.repos.d/docker-ce.repo 
-rm -f /etc/yum.repos.d/_copr:copr.fedorainfracloud.org:phracek:PyCharm.repo 
-rm -f /etc/yum.repos.d/fedora-cisco-openh264.repo 
+for i in $( /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
+  rm -f /etc/yum.repos.de/${i}
+done
 rm -rf /tmp/* /var/* 
