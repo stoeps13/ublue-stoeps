@@ -50,6 +50,7 @@ install:
   - qemu-user-binfmt
   - qemu-user-static
   - stow
+  - thinkfan
   - tmux
   - v4l2loopback
   - vdirsyncer
