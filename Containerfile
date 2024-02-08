@@ -39,12 +39,6 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 # Change this if you want different version/tag of akmods.
 COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms /tmp/rpms
 
-# Enable thinkfan
-# RUN rpm-ostree kargs --append=thinkpad_acpi.fan_control=1
-
-# Update Power profiles daemon
-RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:ublue-os:staging power-profiles-daemon
-
 # Add some container binaries
 COPY --from=cgr.dev/chainguard/dive:latest /usr/bin/dive /usr/bin/dive
 COPY --from=cgr.dev/chainguard/helm:latest /usr/bin/helm /usr/bin/helm
