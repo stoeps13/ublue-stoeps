@@ -8,6 +8,7 @@ system:
     - com.calibre_ebook.calibre
     - com.discordapp.Discord
     - com.github.IsmaelMartinez.teams_for_linux
+    - com.github.maoschanz.drawing
     - com.github.micahflee.torbrowser-launcher
     - com.github.tchx84.Flatseal
     - com.github.zocker_160.SyncThingy
@@ -19,10 +20,10 @@ system:
     - com.raggesilver.BlackBox
     - im.riot.Riot
     - io.dbeaver.DBeaverCommunity
+    - io.github.JaGoLi.ytdl_gui
     - io.github.aandrew_me.ytdn
     - io.github.celluloid_player.Celluloid
     - io.github.fabrialberio.pinapp
-    - io.github.JaGoLi.ytdl_gui
     - io.github.java_decompiler.jd-gui
     - io.github.realmazharhussain.GdmSettings
     - io.missioncenter.MissionCenter
@@ -34,29 +35,29 @@ system:
     - org.fedoraproject.MediaWriter
     - org.flameshot.Flameshot
     - org.gimp.GIMP
-    - org.gnome.baobab
     - org.gnome.Calculator
     - org.gnome.Calendar
     - org.gnome.Characters
-    - org.gnome.clocks
     - org.gnome.Connections
     - org.gnome.Contacts
     - org.gnome.DejaDup
     - org.gnome.Evince
-    - org.gnome.font-viewer
     - org.gnome.Logs
     - org.gnome.Loupe
     - org.gnome.Maps
-    - org.gnome.meld
     - org.gnome.NautilusPreviewer
     - org.gnome.TextEditor
     - org.gnome.Weather
+    - org.gnome.baobab
+    - org.gnome.clocks
+    - org.gnome.font-viewer
+    - org.gnome.meld
     - org.gustavoperedo.FontDownloader
     - org.inkscape.Inkscape
     - org.libreoffice.LibreOffice
     - org.localsend.localsend_app
-    - org.mozilla.firefox
     - org.mozilla.Thunderbird
+    - org.mozilla.firefox
     - us.zoom.Zoom
   remove:
   # - org.gnome.eog
