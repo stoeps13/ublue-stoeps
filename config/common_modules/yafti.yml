@@ -1,0 +1,4 @@
+type: yafti
+custom-flatpaks:
+  - Krita: org.kde.krita
+  - Drawing: com.github.maoschanz.drawing
