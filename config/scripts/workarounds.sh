@@ -15,8 +15,11 @@ sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /us
 # Set up services
 systemctl enable podman.socket
 
+# Update Power profiles daemon
+rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:ublue-os:staging power-profiles-daemon
+
 # Clean up repos, everything is on the image so we don't need them
 for i in $( /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
   rm -f /etc/yum.repos.de/${i}
 done
-rm -rf /tmp/* /var/* 
+rm -rf /tmp/* /var/*

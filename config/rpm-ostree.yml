@@ -25,6 +25,7 @@ install:
   - gnome-shell-extension-gsconnect
   - gnome-shell-extension-logo-menu
   - guestfs-tools
+  - iotop
   - isync
   - kernel-devel
   - kmod-v4l2loopback
@@ -37,6 +38,7 @@ install:
   - podman-plugins
   - podmansh
   - powerline-fonts
+  - powertop
   - python3-libvirt
   - qemu
   - qemu-char-spice
