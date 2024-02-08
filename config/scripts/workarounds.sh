@@ -13,7 +13,7 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /usr/lib | grep vdirsyncer)
 
 # Clean up repos, everything is on the image so we don't need them
-for i in $( /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
+for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
   rm -f /etc/yum.repos.de/${i}
 done
 rm -rf /tmp/* /var/*
