@@ -19,9 +19,6 @@ systemctl enable thinkfan
 # Enable thinkfan
 RUN rpm-ostree kargs --append=thinkpad_acpi.fan_control=1
 
-# Update Power profiles daemon
-RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:ublue-os:staging power-profiles-daemon
-
 # Clean up repos, everything is on the image so we don't need them
 for i in $( /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
   rm -f /etc/yum.repos.de/${i}
