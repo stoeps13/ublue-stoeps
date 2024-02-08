@@ -12,15 +12,9 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 # Edit vdirsyncer google.py to make it work with gmail
 sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /usr/lib | grep vdirsyncer)
 
-# Enable thinkfan
-rpm-ostree kargs --append=thinkpad_acpi.fan_control=1
-
 # Set up services
 systemctl enable podman.socket
 systemctl enable thinkfan
-
-# Update Power profiles daemon
-rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:ublue-os:staging power-profiles-daemon
 
 # Clean up repos, everything is on the image so we don't need them
 for i in $( /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
