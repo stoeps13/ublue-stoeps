@@ -37,7 +37,7 @@ ADD modules /tmp/modules/
 COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 
 # Change this if you want different version/tag of akmods.
-COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms /tmp/rpms
+COPY --from=ghcr.io/ublue-os/akmods:main-39-20240206 /rpms /tmp/rpms
 
 # Add some container binaries
 COPY --from=cgr.dev/chainguard/dive:latest /usr/bin/dive /usr/bin/dive
