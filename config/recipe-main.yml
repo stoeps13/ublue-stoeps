@@ -7,22 +7,10 @@ base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 39 # latest is also supported if you want new updates ASAP
 
 modules:
-  - from-file: akmods.yml
-
-  - from-file: fonts.yml
-
-  - from-file: systemd.yml
-
-  - type: files
-    files:
-      - usr: /usr # copy static configurations
-
-  - from-file: rpm-ostree.yml
-
-  - from-file: default-flatpaks.yml
-
-  - type: script
-    scripts:
-      # this sets up the proper policy & signing files for signed images to work
-      - signing.sh
-      - workarounds.sh
+  - from-file: common_modules/akmods.yml
+  - from-file: common_modules/default-flatpaks.yml
+  - from-file: common_modules/files.yml
+  - from-file: common_modules/fonts.yml
+  - from-file: common_modules/rpm-ostree.yml
+  - from-file: common_modules/script.yml
+  - from-file: common_modules/systemd.yml
