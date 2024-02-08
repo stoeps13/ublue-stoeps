@@ -40,7 +40,7 @@ COPY --from=docker.io/mikefarah/yq /usr/bin/yq /usr/bin/yq
 COPY --from=ghcr.io/ublue-os/akmods:main-39 /rpms /tmp/rpms
 
 # Enable thinkfan
-RUN rpm-ostree kargs --append=thinkpad_acpi.fan_control=1
+# RUN rpm-ostree kargs --append=thinkpad_acpi.fan_control=1
 
 # Update Power profiles daemon
 RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:ublue-os:staging power-profiles-daemon
