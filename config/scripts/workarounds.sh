@@ -12,13 +12,6 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 # Edit vdirsyncer google.py to make it work with gmail
 sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /usr/lib | grep vdirsyncer)
 
-# Set up services
-systemctl enable podman.socket
-systemctl enable thinkfan
-
-# Enable thinkfan
-RUN rpm-ostree kargs --append=thinkpad_acpi.fan_control=1
-
 # Clean up repos, everything is on the image so we don't need them
 for i in $( /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
   rm -f /etc/yum.repos.de/${i}

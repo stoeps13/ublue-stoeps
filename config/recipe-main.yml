@@ -7,6 +7,12 @@ base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 39 # latest is also supported if you want new updates ASAP
 
 modules:
+  - from-file: akmods.yml
+
+  - from-file: fonts.yml
+
+  - from-file: systemd.yml
+
   - type: files
     files:
       - usr: /usr # copy static configurations
