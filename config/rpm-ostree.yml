@@ -7,9 +7,12 @@ repos:
   # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
 install:
   - alacritty
+  - bat
   - dbus-x11
   - devpod
   - edk2-ovmf
+  - epson-inkjet-printer-escpr
+  - epson-inkjet-printer-escpr2
   - fd-find
   - firewall-config
   - fzf
@@ -24,6 +27,7 @@ install:
   - guestfs-tools
   - isync
   - kernel-devel
+  - kmod-v4l2loopback
   - libvirt
   - libvirt-nss
   - make
@@ -45,6 +49,7 @@ install:
   - qemu-user-static
   - stow
   - tmux
+  - v4l2loopback
   - vdirsyncer
   - vim
   - virt-install
