@@ -14,6 +14,7 @@ install:
   - docker-buildx-plugin
   - docker-ce
   - docker-ce-cli
+  - docker-compose
   - docker-compose-plugin
   - edk2-ovmf
   - epson-inkjet-printer-escpr
