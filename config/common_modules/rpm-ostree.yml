@@ -11,9 +11,9 @@ install:
   - bat
   - dbus-x11
   - devpod
+  - docker-buildx-plugin
   - docker-ce
   - docker-ce-cli
-  - docker-buildx-plugin
   - docker-compose-plugin
   - edk2-ovmf
   - epson-inkjet-printer-escpr
@@ -21,6 +21,7 @@ install:
   - eza
   - fd-find
   - firewall-config
+  - fuse-sshfs
   - fzf
   - gcc
   - gcc-c++
