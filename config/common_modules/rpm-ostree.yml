@@ -12,6 +12,9 @@ install:
   - dbus-x11
   - devpod
   - docker-ce
+  - docker-ce-cli
+	- docker-buildx-plugin
+	- docker-compose-plugin
   - edk2-ovmf
   - epson-inkjet-printer-escpr
   - epson-inkjet-printer-escpr2
