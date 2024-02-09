@@ -15,4 +15,7 @@ modules:
   - from-file: common_modules/rpm-ostree.yml
   - from-file: common_modules/script.yml
   - from-file: common_modules/yafti.yml
-  #- from-file: common_modules/systemd.yml
+  - from-file: common_modules/systemd.yml
+    # some comment to
+
+    # have a empty line
