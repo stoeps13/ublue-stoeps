@@ -44,7 +44,7 @@ COPY --from=cgr.dev/chainguard/dive:latest /usr/bin/dive /usr/bin/dive
 COPY --from=cgr.dev/chainguard/helm:latest /usr/bin/helm /usr/bin/helm
 COPY --from=cgr.dev/chainguard/kubectl:latest /usr/bin/kubectl /usr/bin/kubectl
 #COPY --from=quay.io/derailed/k9s:latest /usr/bin/k9s /usr/bin/k9s
-COPY --from=docker.io/aquasec/trivy:latest /usr/bin/trivy /usr/bin/trivy
+#COPY --from=docker.io/aquasec/trivy:latest /usr/bin/trivy /usr/bin/trivy
 
 # Run the build script, then clean up temp files and finalize container build.
 RUN chmod +x /tmp/build.sh && /tmp/build.sh && \
