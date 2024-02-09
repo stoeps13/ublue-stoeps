@@ -10,9 +10,11 @@ install:
   - bat
   - dbus-x11
   - devpod
+  - docker-ce
   - edk2-ovmf
   - epson-inkjet-printer-escpr
   - epson-inkjet-printer-escpr2
+  - eza
   - fd-find
   - firewall-config
   - fzf
@@ -25,6 +27,7 @@ install:
   - gnome-shell-extension-gsconnect
   - gnome-shell-extension-logo-menu
   - guestfs-tools
+  - httpie
   - iotop
   - isync
   - kernel-devel
@@ -34,6 +37,9 @@ install:
   - make
   - notmuch
   - pass
+  - pavucontrol
+  - pipewire
+  - playerctl
   - podman-compose
   - podman-plugins
   - podmansh
@@ -58,6 +64,7 @@ install:
   - virt-install
   - virt-manager
   - virt-viewer
+  - wireplumber
   - zsh
 remove:
   - firefox
