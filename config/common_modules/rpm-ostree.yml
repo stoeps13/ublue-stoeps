@@ -38,6 +38,7 @@ install:
   - isync
   - kernel-devel
   - kmod-v4l2loopback
+  - langpacks-en
   - libvirt
   - libvirt-nss
   - make
