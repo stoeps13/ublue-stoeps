@@ -22,6 +22,7 @@ install:
   - eza
   - fd-find
   - firewall-config
+  - flameshot
   - fuse-sshfs
   - fzf
   - gcc
@@ -62,6 +63,7 @@ install:
   - qemu-system-x86-core
   - qemu-user-binfmt
   - qemu-user-static
+  - shutter
   - stow
   - thinkfan
   - tmux
