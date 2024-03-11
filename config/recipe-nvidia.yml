@@ -16,5 +16,5 @@ modules:
   - from-file: common_modules/yafti.yml
   - from-file: common_modules/systemd.yml
   - from-file: common_modules/script.yml
-  - from-file: common_modules/containerfile.yml
+  # - from-file: common_modules/containerfile.yml
   - type: siging
