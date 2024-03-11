@@ -16,4 +16,4 @@ sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /us
 for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
   rm -f /etc/yum.repos.de/${i}
 done
-rm -rf /tmp/* /var/*
+# rm -rf /tmp/* /var/*
