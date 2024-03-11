@@ -45,6 +45,7 @@ install:
   - libvirt-nss
   - make
   - notmuch
+  - obs-studio
   - pass
   - pavucontrol
   - pipewire
