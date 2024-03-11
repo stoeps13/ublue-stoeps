@@ -7,7 +7,6 @@ system:
     - com.bitwarden.desktop
     - com.calibre_ebook.calibre
     - com.discordapp.Discord
-    - com.github.IsmaelMartinez.teams_for_linux
     - com.github.maoschanz.drawing
     - com.github.micahflee.torbrowser-launcher
     - com.github.tchx84.Flatseal
@@ -54,11 +53,7 @@ system:
     - org.gnome.meld
     - org.gustavoperedo.FontDownloader
     - org.inkscape.Inkscape
-    - org.libreoffice.LibreOffice
     - org.localsend.localsend_app
-    - org.mozilla.Thunderbird
-    - org.mozilla.firefox
-    - us.zoom.Zoom
   remove:
   # - org.gnome.eog
   #
@@ -67,3 +62,8 @@ system:
 user:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
+  install:
+    - us.zoom.Zoom
+    - org.mozilla.Thunderbird
+    - org.mozilla.firefox
+    - org.libreoffice.LibreOffice
