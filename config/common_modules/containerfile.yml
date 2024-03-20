@@ -1,13 +1,7 @@
 type: containerfile
 snippets:
-  - COPY /usr/bin/dive /usr/bin/dive
-  - COPY /usr/bin/helm /usr/bin/helm
-  - COPY /usr/bin/kubectl /usr/bin/kubectl
-  - COPY /bin/k9s /usr/bin/k9s
-  - COPY /usr/local/bin/trivy /usr/bin/trivy
-containerfiles:
-  - cgr.dev/chainguard/dive:latest
-  - cgr.dev/chainguard/helm:latest
-  - cgr.dev/chainguard/kubectl:latest
-  - quay.io/derailed/k9s:latest
-  - docker.io/aquasec/trivy:latest
+  - COPY --from=cgr.dev/chainguard/dive:latest /usr/bin/dive /usr/bin/dive
+  - COPY --from=cgr.dev/chainguard/helm:latest /usr/bin/helm /usr/bin/helm
+  - COPY --from=cgr.dev/chainguard/kubectl:latest /usr/bin/kubectl /usr/bin/kubectl
+  - COPY --from=quay.io/derailed/k9s:latest /bin/k9s /usr/bin/k9s
+  - COPY --from=docker.io/aquasec/trivy:latest /usr/local/bin/trivy /usr/bin/trivy
