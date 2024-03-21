@@ -26,6 +26,8 @@ jobs:
           - recipe-nvidia.yml
     steps:
        # the build is fully handled by the reusable github action
+      - name: Maximize build space
+        uses: ublue-os/remove-unwanted-software@v6
       - name: Build Custom Image
         uses: blue-build/github-action@v1.1
         with:
