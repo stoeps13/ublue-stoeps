@@ -35,6 +35,7 @@ install:
   - kmod-v4l2loopback
   - langpacks-en
   - libvirt
+  - libvirt-dbus
   - libvirt-nss
   - make
   - notmuch

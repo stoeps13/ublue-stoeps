@@ -4,14 +4,7 @@ system:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
   install:
-    - com.bitwarden.desktop
-    - com.calibre_ebook.calibre
-    - com.github.maoschanz.drawing
-    - com.github.tchx84.Flatseal
-    - com.logseq.Logseq
     - com.mattjakeman.ExtensionManager
-    - io.github.java_decompiler.jd-gui
-    - org.cryptomator.Cryptomator
     - org.davmail.DavMail
     - org.gnome.Calendar
     - org.gnome.Characters
@@ -38,5 +31,10 @@ user:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
   install:
-    - us.zoom.Zoom
+    - com.bitwarden.desktop
+    - com.github.tchx84.Flatseal
+    - com.logseq.Logseq
+    - io.github.java_decompiler.jd-gui
+    - org.cryptomator.Cryptomator
     - org.mozilla.firefox
+    - us.zoom.Zoom
