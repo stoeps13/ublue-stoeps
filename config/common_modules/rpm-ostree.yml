@@ -71,7 +71,6 @@ install:
 remove:
   - firefox
   - firefox-langpacks
-  - gnome-classic-session
   - gnome-initial-setup
   - gnome-shell-extension-apps-menu
   - gnome-shell-extension-background-logo
