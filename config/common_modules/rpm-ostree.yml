@@ -44,7 +44,6 @@ install:
   - pipewire
   - playerctl
   - podman-compose
-  - podman-plugins
   - podmansh
   - powerline-fonts
   - powertop
