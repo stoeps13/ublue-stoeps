@@ -47,6 +47,7 @@ install:
   - powerline-fonts
   - powertop
   - python3-libvirt
+  - python3-tmuxp
   - qemu
   - qemu-char-spice
   - qemu-device-display-virtio-gpu
