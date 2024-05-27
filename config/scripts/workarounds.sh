@@ -17,4 +17,3 @@ for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
   rm -f /etc/yum.repos.de/${i}
 done
 # rm -rf /tmp/* /var/*
-pip install tmuxp
