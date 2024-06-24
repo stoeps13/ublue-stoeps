@@ -19,7 +19,6 @@ install:
   - fuse-sshfs
   - fzf
   - gcc
-  - gcc-c++
   - genisoimage
   - gnome-shell-extension-appindicator
   - gnome-shell-extension-blur-my-shell
