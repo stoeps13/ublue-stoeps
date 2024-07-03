@@ -8,6 +8,8 @@ install:
   - at
   - bat
   - dbus-x11
+  - ddrescue
+  - testdisk
   - edk2-ovmf
   - epson-inkjet-printer-escpr
   - epson-inkjet-printer-escpr2
