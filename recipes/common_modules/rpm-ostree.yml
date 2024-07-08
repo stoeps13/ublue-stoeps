@@ -39,6 +39,7 @@ install:
   - libvirt-nss
   - make
   - notmuch
+  - neovim
   - obs-studio
   - pass
   - pavucontrol
