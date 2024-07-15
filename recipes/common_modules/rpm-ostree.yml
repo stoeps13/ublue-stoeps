@@ -65,6 +65,9 @@ install:
   - thinkfan
   - tmux
   - v4l2loopback
+  - vagrant
+  - vagrant-libvirt
+  - vagrant-hostmanager
   - vdirsyncer
   - vim
   - virt-install
