@@ -73,9 +73,6 @@ install:
   - virt-install
   - virt-manager
   - virt-viewer
-  - winrm
-  - winrm-fs
-  - winrm-elevated
   - wireplumber
   - zsh
 remove:
