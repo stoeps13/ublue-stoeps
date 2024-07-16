@@ -13,8 +13,8 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /usr/lib | grep vdirsyncer)
 
 # Add vagrant plugins
-vagrant plugin install vagrant-windows-sysprep
 vagrant plugin install vagrant-libvirt
+vagrant plugin install vagrant-windows-sysprep
 vagrant plugin install winrm
 vagrant plugin install winrm-fs
 vagrant plugin install winrm-elevated
