@@ -66,6 +66,7 @@ install:
   - tmux
   - v4l2loopback
   - vagrant
+  - vagrant-libvirt
   - vdirsyncer
   - vim
   - virt-install
