@@ -15,6 +15,9 @@ sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /us
 # Add vagrant plugins
 vagrant plugin install vagrant-windows-sysprep
 vagrant plugin install vagrant-libvirt
+vagrant plugin install winrm
+vagrant plugin install winrm-fs
+vagrant plugin install winrm-elevated
 
 
 # Clean up repos, everything is on the image so we don't need them
