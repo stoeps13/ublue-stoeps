@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-stoeps-nvidia
+name: ublue-stoeps-sericea-main
 # description will be included in the image's metadata
 description: My ublue image for my personal and working devices
 
