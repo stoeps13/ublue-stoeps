@@ -8,6 +8,8 @@ install:
   - at
   - bat
   - dbus-x11
+  - ddrescue
+  - testdisk
   - edk2-ovmf
   - epson-inkjet-printer-escpr
   - epson-inkjet-printer-escpr2
@@ -19,7 +21,6 @@ install:
   - fuse-sshfs
   - fzf
   - gcc
-  - gcc-c++
   - genisoimage
   - gnome-shell-extension-appindicator
   - gnome-shell-extension-blur-my-shell
@@ -38,6 +39,7 @@ install:
   - libvirt-nss
   - make
   - notmuch
+  - neovim
   - obs-studio
   - pass
   - pavucontrol
@@ -63,6 +65,8 @@ install:
   - thinkfan
   - tmux
   - v4l2loopback
+  - vagrant
+  - vagrant-libvirt
   - vdirsyncer
   - vim
   - virt-install
@@ -71,8 +75,6 @@ install:
   - wireplumber
   - zsh
 remove:
-  - firefox
-  - firefox-langpacks
   - gnome-initial-setup
   - htop
   - nvtop
