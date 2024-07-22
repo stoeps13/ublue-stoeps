@@ -36,5 +36,4 @@ user:
     - com.logseq.Logseq
     - io.github.java_decompiler.jd-gui
     - org.cryptomator.Cryptomator
-    - org.mozilla.firefox
     - us.zoom.Zoom
