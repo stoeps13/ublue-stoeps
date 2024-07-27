@@ -76,5 +76,7 @@ install:
   - zsh
 remove:
   - gnome-initial-setup
+  - firefox
+  - firefox-langpacks
   - htop
   - nvtop

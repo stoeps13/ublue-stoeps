@@ -22,6 +22,7 @@ install:
   - fzf
   - gcc
   - genisoimage
+  - gnome-keyring
   - guestfs-tools
   - httpie
   - iotop
@@ -72,3 +73,5 @@ install:
 remove:
   - htop
   - nvtop
+  - firefox
+  - firefox-langpacks
