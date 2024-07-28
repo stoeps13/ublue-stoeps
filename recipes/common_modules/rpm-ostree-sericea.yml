@@ -30,8 +30,6 @@ install:
   - kernel-devel
   - kitty
   - kitty-kitten
-  - kitty-shell-integration
-  - kitty-terminfo
   - kmod-v4l2loopback
   - langpacks-en
   - libvirt
@@ -76,4 +74,3 @@ install:
   - wireplumber
   - zsh
 remove:
-  - firefox
