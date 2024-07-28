@@ -5,3 +5,4 @@ repos:
 install:
 remove:
   - firefox
+  - firefox-langpacks
