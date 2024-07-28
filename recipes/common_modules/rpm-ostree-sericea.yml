@@ -3,6 +3,65 @@ repos:
   - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
   - https://negativo17.org/repos/fedora-multimedia.repo
 install:
+  - at
+  - bat
+  - edk2-ovmf
+  - epson-inkjet-printer-escpr
+  - epson-inkjet-printer-escpr2
+  - eza
+  - fd-find
+  - firewall-config
+  - flameshot
+  - fzf
+  - gcc
+  - genisoimage
+  - gnome-keyring
+  - guestfs-tools
+  - httpie
+  - iotop
+  - isync
+  - java-11-openjdk
+  - kernel-devel
+  - kitty
+  - kitty-kitten
+  - kmod-v4l2loopback
+  - libvirt
+  - libvirt-dbus
+  - libvirt-nss
+  - make
+  - neovim
+  - notmuch
+  - obs-studio
+  - pass
+  - pavucontrol
+  - pipewire
+  - playerctl
+  - podman-compose
+  - podmansh
+  - powertop
+  - python3-libvirt
+  - python3-tmuxp
+  - qemu
+  - qemu-char-spice
+  - qemu-device-display-virtio-gpu
+  - qemu-device-display-virtio-vga
+  - qemu-device-usb-redirect
+  - qemu-img
+  - qemu-system-x86-core
+  - qemu-user-binfmt
+  - qemu-user-static
+  - stow
+  - tmux
+  - v4l2loopback
+  - vagrant
+  - vagrant-libvirt
+  - vdirsyncer
+  - vim
+  - virt-install
+  - virt-manager
+  - virt-viewer
+  - wireplumber
+  - zsh
 remove:
   - firefox
   - firefox-langpacks
