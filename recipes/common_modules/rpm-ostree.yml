@@ -1,5 +1,7 @@
 type: rpm-ostree
 repos:
+  - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+  - https://negativo17.org/repos/fedora-multimedia.repo
 install:
   - alacritty
   - at
@@ -60,7 +62,6 @@ install:
   - qemu-system-x86-core
   - qemu-user-binfmt
   - qemu-user-static
-  - shutter
   - stow
   - thinkfan
   - tmux
