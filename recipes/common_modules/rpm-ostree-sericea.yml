@@ -9,7 +9,6 @@ install:
   - bat
   - dbus-x11
   - ddrescue
-  - testdisk
   - edk2-ovmf
   - epson-inkjet-printer-escpr
   - epson-inkjet-printer-escpr2
@@ -27,6 +26,7 @@ install:
   - httpie
   - iotop
   - isync
+  - java-11-openjdk
   - kernel-devel
   - kitty
   - kitty-kitten
@@ -38,8 +38,8 @@ install:
   - libvirt-dbus
   - libvirt-nss
   - make
-  - notmuch
   - neovim
+  - notmuch
   - obs-studio
   - pass
   - pavucontrol
@@ -62,6 +62,7 @@ install:
   - qemu-user-static
   - shutter
   - stow
+  - testdisk
   - thinkfan
   - tmux
   - v4l2loopback

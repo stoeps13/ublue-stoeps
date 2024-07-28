@@ -31,6 +31,7 @@ install:
   - httpie
   - iotop
   - isync
+  - java-11-openjdk
   - kernel-devel
   - kitty
   - kitty-kitten
