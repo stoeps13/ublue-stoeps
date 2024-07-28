@@ -1,7 +1,7 @@
 type: bling
 install:
   - ublue-update # https://github.com/ublue-os/ublue-update
-  - laptop # installs TLP and configures your system for laptop usage
+    # - laptop # installs TLP and configures your system for laptop usage
     # - 1password # install 1Password (stable) and `op` CLI tool
     # - dconf-update-service # a service unit that updates the dconf db on boot
     # - gnome-vrr # enables gnome-vrr for your image
