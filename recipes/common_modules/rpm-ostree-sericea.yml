@@ -28,6 +28,10 @@ install:
   - iotop
   - isync
   - kernel-devel
+  - kitty
+  - kitty-kitten
+  - kitty-shell-integration
+  - kitty-terminfo
   - kmod-v4l2loopback
   - langpacks-en
   - libvirt
