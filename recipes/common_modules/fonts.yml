@@ -3,6 +3,7 @@ fonts:
   nerd-fonts:
     - FiraCode # don't add "Nerd Font" suffix.
     - SourceCodePro
+    - Iosevka
   google-fonts:
     - Roboto
     - Open Sans
