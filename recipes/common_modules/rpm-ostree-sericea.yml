@@ -24,21 +24,17 @@ install:
   - kernel-devel
   - kitty
   - kitty-kitten
-  - kmod-v4l2loopback
   - libvirt
-  - libvirt-dbus
   - libvirt-nss
   - make
   - neovim
   - notmuch
   - obs-studio
   - pass
-  - pavucontrol
   - pipewire
   - playerctl
   - podman-compose
   - podmansh
-  - powertop
   - python3-libvirt
   - python3-tmuxp
   - qemu
@@ -52,7 +48,6 @@ install:
   - qemu-user-static
   - stow
   - tmux
-  - v4l2loopback
   - vagrant
   - vagrant-libvirt
   - vdirsyncer
@@ -60,7 +55,6 @@ install:
   - virt-install
   - virt-manager
   - virt-viewer
-  - wireplumber
   - zsh
 remove:
   - firefox
