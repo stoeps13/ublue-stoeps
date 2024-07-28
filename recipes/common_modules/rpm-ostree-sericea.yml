@@ -76,7 +76,4 @@ install:
   - wireplumber
   - zsh
 remove:
-  - htop
-  - nvtop
   - firefox
-  - firefox-langpacks
