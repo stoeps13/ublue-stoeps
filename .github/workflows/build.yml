@@ -1,7 +1,7 @@
 name: bluebuild
 on:
   schedule:
-    - cron: "00 17 * * *" # build at 17:00 UTC every day
+    - cron: "00 18 * * *" # build at 17:00 UTC every day
                           # (20 minutes after last ublue images start building)
   push:
     paths-ignore: # don't rebuild if only documentation has changed
@@ -28,8 +28,6 @@ jobs:
           - recipe-sericea-nvidia.yml
     steps:
        # the build is fully handled by the reusable github action
-      - name: Maximize build space
-        uses: ublue-os/remove-unwanted-software@v6
       - name: Build Custom Image
         uses: blue-build/github-action@v1.6
         with:
@@ -37,3 +35,4 @@ jobs:
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
+          maximize_build_space: true

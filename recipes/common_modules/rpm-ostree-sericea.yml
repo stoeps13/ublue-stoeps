@@ -25,10 +25,10 @@ install:
   - httpie
   - iotop
   - isync
-  - java-11-openjdk
+  #- java-11-openjdk
   - kernel-devel
-  - kitty
-  - kitty-kitten
+  #- kitty
+  #- kitty-kitten
   - kmod-v4l2loopback
   - langpacks-en
   - libvirt
