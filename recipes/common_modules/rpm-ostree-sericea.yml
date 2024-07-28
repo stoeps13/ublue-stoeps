@@ -3,10 +3,8 @@ repos:
   - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
   - https://negativo17.org/repos/fedora-multimedia.repo
 install:
-  - alacritty
   - at
   - bat
-  - dbus-x11
   - ddrescue
   - edk2-ovmf
   - epson-inkjet-printer-escpr
@@ -16,7 +14,6 @@ install:
   - fd-find
   - firewall-config
   - flameshot
-  - fuse-sshfs
   - fzf
   - gcc
   - genisoimage
