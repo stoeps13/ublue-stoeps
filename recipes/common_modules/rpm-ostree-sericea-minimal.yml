@@ -1,8 +1,0 @@
-type: rpm-ostree
-repos:
-  - https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-%OS_VERSION%/che-nerd-fonts-fedora-%OS_VERSION%.repo
-  - https://negativo17.org/repos/fedora-multimedia.repo
-install:
-remove:
-  - firefox
-  - firefox-langpacks
