@@ -29,6 +29,7 @@ install:
   - kernel-devel
   - kitty
   - kitty-kitten
+  - kitty-terminfo
   - langpacks-en
   - libvirt
   - libvirt-nss

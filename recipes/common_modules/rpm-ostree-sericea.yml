@@ -24,6 +24,7 @@ install:
   - kernel-devel
   - kitty
   - kitty-kitten
+  - kitty-terminfo
   - libvirt
   - libvirt-nss
   - make
