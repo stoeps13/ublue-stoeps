@@ -4,6 +4,8 @@ fonts:
     - FiraCode # don't add "Nerd Font" suffix.
     - SourceCodePro
     - Iosevka
+    - JetBrainsMono
   google-fonts:
     - Roboto
     - Open Sans
+    - JetBtains Mono
