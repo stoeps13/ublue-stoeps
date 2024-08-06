@@ -1,0 +1,11 @@
+type: rpm-ostree
+repos:
+  - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
+install:
+  - gnome-shell-extension-appindicator
+  - gnome-shell-extension-blur-my-shell
+  - gnome-shell-extension-dash-to-dock
+  - gnome-shell-extension-gsconnect
+  - gnome-shell-extension-logo-menu
+remove:
+  - gnome-initial-setup
