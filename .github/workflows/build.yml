@@ -1,7 +1,7 @@
 name: bluebuild
 on:
   schedule:
-    - cron: "00 18 1 * *" # build at 17:00 UTC every day
+    - cron: "00 18 * * */2" # build at 17:00 UTC every day
                           # (20 minutes after last ublue images start building)
   pull_request:
   workflow_dispatch: # allow manually triggering builds
