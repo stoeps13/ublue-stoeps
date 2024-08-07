@@ -18,10 +18,10 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe-main.yml
           - recipe-sericea-main.yml
           - recipe-nvidia.yml
-          - recipe-sericea-nvidia.yml
+          # - recipe-main.yml
+          # - recipe-sericea-nvidia.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
