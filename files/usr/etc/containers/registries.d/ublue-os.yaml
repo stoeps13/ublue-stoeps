@@ -1,0 +1,3 @@
+docker:
+  ghcr.io/stoeps13:
+    use-sigstore-attachments: true
