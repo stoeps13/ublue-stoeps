@@ -18,10 +18,6 @@ sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /us
 #vagrant plugin install winrm
 #vagrant plugin install winrm-fs
 #vagrant plugin install winrm-elevated
-#
-
-# Set GDM Loginscreen background
-sudo -u gdm gsettings set org.gnome.login-screen logo /usr/share/backgrounds/default.png
 
 # Clean up repos, everything is on the image so we don't need them
 for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
