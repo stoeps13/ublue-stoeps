@@ -1,3 +1,5 @@
 .idea
 cosign.key
 Containerfile
+/Containerfile
+/Containerfile.*
