@@ -3,6 +3,7 @@ install:
   - alacritty
   - at
   - bat
+  - difftastic
   - edk2-ovmf
   - epson-inkjet-printer-escpr
   - epson-inkjet-printer-escpr2
