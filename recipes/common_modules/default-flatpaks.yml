@@ -22,6 +22,7 @@ system:
     - org.gnome.clocks
     - org.gnome.font-viewer
     - org.localsend.localsend_app
+    - org.wezfurlong.wezterm
   remove:
   # - org.gnome.eog
   #
