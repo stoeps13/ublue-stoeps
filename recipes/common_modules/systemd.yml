@@ -1,7 +1,11 @@
 type: systemd
-system:
 user:
   enabled:
     - podman.socket
     - chezmoi-init.service
     - chezmoi-update.timer
+    - update-user-flatpaks.timer
+system:
+  enabled:
+    - update-system-flatpaks.timer
+    - ublue-update.timer
