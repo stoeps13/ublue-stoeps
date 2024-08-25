@@ -1,3 +1,4 @@
+---
 type: systemd
 user:
   enabled:

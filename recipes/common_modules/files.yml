@@ -1,6 +1,7 @@
+---
 type: files
 files:
   - source: usr
     destination: /usr
-  - source: etc 
+  - source: etc
     destination: /etc

@@ -1,3 +1,4 @@
+---
 type: chezmoi
 repository: "https://github.com/stoeps13/chezmoi-dotfiles"
 all-users: false

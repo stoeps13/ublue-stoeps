@@ -1,3 +1,4 @@
+---
 type: gschema-overrides
 include:
   - tap-to-click.gschema.override
