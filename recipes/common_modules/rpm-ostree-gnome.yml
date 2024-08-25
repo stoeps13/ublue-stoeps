@@ -20,8 +20,4 @@ install:
   - simple-scan
   - zenity
 remove:
-  - gnome-software-rpm-ostree
-  - gnome-tour
-  - gnome-extensions-app
   - gnome-initial-setup
-  - gnome-terminal-nautilus
