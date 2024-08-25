@@ -1,3 +1,4 @@
 type: akmods
+base: main
 install:
   - v4l2loopback

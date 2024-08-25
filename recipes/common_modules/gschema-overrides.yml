@@ -1,0 +1,4 @@
+type: gschema-overrides
+include:
+  - tab-to-click.gschema.override
+  - compose-key.gschema.override
