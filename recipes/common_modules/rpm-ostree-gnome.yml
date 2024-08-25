@@ -10,6 +10,7 @@ install:
   - gnome-shell-extension-gsconnect
   - gnome-shell-extension-logo-menu
   - gnome-shell-extension-search-light
+  - gnome-shell-extension-tiling-shell
   - gnome-shell-extension-tailscale-gnome-qs
   - libgda
   - libgda-sqlite
