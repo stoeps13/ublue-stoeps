@@ -7,5 +7,8 @@ install:
   - gnome-shell-extension-dash-to-dock
   - gnome-shell-extension-gsconnect
   - gnome-shell-extension-logo-menu
+  - glib2-devel
+  - dconf
+  - git
 remove:
   - gnome-initial-setup

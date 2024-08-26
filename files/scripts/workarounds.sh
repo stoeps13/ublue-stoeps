@@ -12,15 +12,13 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 # Edit vdirsyncer google.py to make it work with gmail
 sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /usr/lib | grep vdirsyncer)
 
-## Add vagrant plugins
-#vagrant plugin install vagrant-libvirt
-#vagrant plugin install vagrant-windows-sysprep
-#vagrant plugin install winrm
-#vagrant plugin install winrm-fs
-#vagrant plugin install winrm-elevated
-
-# Set GDM Loginscreen background
-# gdm gsettings set org.gnome.login-screen logo '/usr/share/backgrounds/default.png'
+# Set gdm background greeter
+git clone --depth=1 https://github.com/realmazharhussain/gdm-tools.git /tmp/gdm-tools
+cd /tmp/gdm-tools
+./install.sh
+set-gdm-theme set -b /usr/share/backgrounds/iceland.png
+./uninstall.sh
+rm -rf /tmp/gdm-tools
 
 # Clean up repos, everything is on the image so we don't need them
 for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
