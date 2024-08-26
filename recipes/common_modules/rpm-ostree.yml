@@ -1,3 +1,4 @@
+---
 type: rpm-ostree
 install:
   - alacritty
@@ -8,6 +9,7 @@ install:
   - epson-inkjet-printer-escpr
   - epson-inkjet-printer-escpr2
   - eza
+  - fastfetch
   - fd-find
   - firewall-config
   - flameshot
@@ -27,8 +29,8 @@ install:
   - langpacks-en
   - libvirt
   - libvirt-nss
+  - lm_sensors
   - make
-  - notmuch
   - neovim
   - obs-studio
   - pass
@@ -36,6 +38,7 @@ install:
   - playerctl
   - podman-compose
   - podmansh
+  - ptyxis
   - python3-libvirt
   - python3-tmuxp
   - qemu
@@ -55,6 +58,7 @@ install:
   - virt-install
   - virt-manager
   - virt-viewer
+  - wl-clipboard
   - zoxide
   - zsh
 remove:

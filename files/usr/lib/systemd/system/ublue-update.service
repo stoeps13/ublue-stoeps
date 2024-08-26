@@ -1,0 +1,7 @@
+[Unit]
+Description=Universal Blue Update Oneshot Service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/ublue-update
+Environment="TOPGRADE_SKIP_BRKC_NOTIFY=true"

@@ -1,7 +1,8 @@
+---
 type: fonts
 fonts:
   nerd-fonts:
-    - FiraCode # don't add "Nerd Font" suffix.
+    - FiraCode
     - SourceCodePro
   google-fonts:
     - Lato

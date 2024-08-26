@@ -1,17 +1,20 @@
+---
 # image will be published to ghcr.io/<user>/<name>
 name: ublue-stoeps-nvidia
 # description will be included in the image's metadata
 description: My ublue image for my personal and working devices
 
 base-image: ghcr.io/ublue-os/silverblue-nvidia
-image-version: 40 # latest is also supported if you want new updates ASAP
+image-version: 40
 
 modules:
   - from-file: common_modules/files.yml
   - from-file: common_modules/akmods.yml
   - from-file: common_modules/bling.yml
+  - from-file: common_modules/chezmoi.yml
   - from-file: common_modules/default-flatpaks.yml
   - from-file: common_modules/fonts.yml
+  - from-file: common_modules/gschema-overrides.yml
   - from-file: common_modules/rpm-ostree.yml
   - from-file: common_modules/rpm-ostree-gnome.yml
   - from-file: common_modules/yafti.yml

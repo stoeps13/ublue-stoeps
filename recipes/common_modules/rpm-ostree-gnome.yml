@@ -1,14 +1,26 @@
+---
 type: rpm-ostree
 repos:
   - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
 install:
+  - dconf
+  - git
+  - glib2-devel
   - gnome-shell-extension-appindicator
   - gnome-shell-extension-blur-my-shell
+  - gnome-shell-extension-caffeine
   - gnome-shell-extension-dash-to-dock
   - gnome-shell-extension-gsconnect
   - gnome-shell-extension-logo-menu
-  - glib2-devel
-  - dconf
-  - git
+  - gnome-shell-extension-search-light
+  - gnome-shell-extension-tailscale-gnome-qs
+  - libgda
+  - libgda-sqlite
+  - libratbag-ratbagd
+  - nautilus-gsconnect
+  - nautilus-open-any-terminal
+  - openssh-askpass
+  - simple-scan
+  - zenity
 remove:
   - gnome-initial-setup

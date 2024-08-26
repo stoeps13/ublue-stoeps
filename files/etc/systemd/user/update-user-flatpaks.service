@@ -1,0 +1,9 @@
+[Unit]
+Description=Update user Flatpaks
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/flatpak update --assumeyes --noninteractive
+
+[Install]
+WantedBy=default.target

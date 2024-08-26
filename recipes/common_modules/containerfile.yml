@@ -1,3 +1,4 @@
+---
 type: containerfile
 snippets:
   - COPY --from=cgr.dev/chainguard/dive:latest /usr/bin/dive /usr/bin/dive
