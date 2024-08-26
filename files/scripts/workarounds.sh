@@ -13,6 +13,9 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /usr/lib | grep vdirsyncer)
 
 # Set gdm background greeter
+dnf copr enable zirix/gdm-wallpaper
+dnf install gdm-wallpaper
+set-gdm-wallpaper /usr/share/backgrounds/iceland.png
 # git clone --depth=1 https://github.com/realmazharhussain/gdm-tools.git /tmp/gdm-tools
 # cd /tmp/gdm-tools
 # cp /usr/share/gnome-shell/gnome-shell-theme.gresource /usr/share/gnome-shell/gnome-shell-theme.gresource.default
