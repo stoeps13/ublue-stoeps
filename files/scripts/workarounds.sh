@@ -15,9 +15,8 @@ sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(fd  google.py /us
 # Set gdm background greeter
 git clone --depth=1 https://github.com/realmazharhussain/gdm-tools.git /tmp/gdm-tools
 cd /tmp/gdm-tools
-./install.sh
-set-gdm-theme set -b /usr/share/backgrounds/iceland.png
-./uninstall.sh
+cp /usr/share/gnome-shell/gnome-shell-theme.gresource /usr/share/gnome-shell/gnome-shell-theme.gresource.default
+bin/set-gdm-theme set -b /usr/share/backgrounds/iceland.png
 rm -rf /tmp/gdm-tools
 
 # Clean up repos, everything is on the image so we don't need them
