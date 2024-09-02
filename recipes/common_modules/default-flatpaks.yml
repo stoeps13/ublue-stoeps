@@ -6,6 +6,7 @@ system:
   repo-name: flathub
   install:
     - com.mattjakeman.ExtensionManager
+    - io.github.zen_browser.zen
     - org.davmail.DavMail
     - org.gnome.Calendar
     - org.gnome.Characters
