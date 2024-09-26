@@ -4,7 +4,7 @@ name: ublue-stoeps-nvidia
 # description will be included in the image's metadata
 description: My ublue image for my personal and working devices
 
-base-image: ghcr.io/ublue-os/bluefin-dx-nvidia
+base-image: ghcr.io/ublue-os/silverblue-nvidia
 image-version: latest
 
 modules:
