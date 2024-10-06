@@ -9,7 +9,7 @@ image-version: 40
 
 modules:
   - from-file: common_modules/files.yml
-  - from-file: common_modules/akmods.yml
+  #- from-file: common_modules/akmods.yml
   - from-file: common_modules/bling.yml
   - from-file: common_modules/default-flatpaks.yml
   - from-file: common_modules/fonts.yml
