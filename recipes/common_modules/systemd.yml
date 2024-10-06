@@ -3,8 +3,6 @@ type: systemd
 user:
   enabled:
     - podman.socket
-    - chezmoi-init.service
-    - chezmoi-update.timer
     - update-user-flatpaks.timer
 system:
   enabled:
