@@ -5,7 +5,7 @@ name: ublue-stoeps-sericea-main
 description: My ublue image for my personal and working devices
 
 base-image: ghcr.io/ublue-os/sericea-main
-image-version: 40
+image-version: latest
 
 modules:
   - from-file: common_modules/files.yml

@@ -25,7 +25,6 @@ install:
   - kitty
   - kitty-kitten
   - kitty-terminfo
-  - kmod-v4l2loopback
   - langpacks-en
   - libvirt
   - libvirt-nss
@@ -52,7 +51,6 @@ install:
   - qemu-user-static
   - stow
   - tmux
-  - v4l2loopback
   - vdirsyncer
   - vim
   - virt-install
