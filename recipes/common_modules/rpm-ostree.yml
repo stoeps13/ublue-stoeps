@@ -2,6 +2,8 @@
 type: rpm-ostree
 repos:
   - tuxedo.repo # copies in .repo file from files/rpm-ostree/tuxedo.repo to /etc/yum.repos.d/
+optfix:
+  - tuxedo-control-center
 install:
   - alacritty
   - at
