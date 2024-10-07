@@ -4,6 +4,7 @@ repos:
   - tuxedo.repo # copies in .repo file from files/rpm-ostree/tuxedo.repo to /etc/yum.repos.d/
 optfix:
   - tuxedo-control-center
+  - tuxedo-drivers
 install:
   - alacritty
   - at
@@ -17,6 +18,7 @@ install:
   - genisoimage
   - guestfs-tools
   - kernel-devel
+  - kernel-headers
   - kitty
   - kitty-kitten
   - kitty-terminfo
@@ -41,6 +43,7 @@ install:
   - qemu-user-binfmt
   - qemu-user-static
   - tuxedo-control-center
+  - tuxedo-drivers
   - vdirsyncer
   - virt-install
   - virt-manager
