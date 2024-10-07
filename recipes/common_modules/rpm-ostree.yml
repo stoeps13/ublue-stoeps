@@ -10,6 +10,7 @@ install:
   - epson-inkjet-printer-escpr2
   - fd-find
   - firewall-config
+  - fzf
   - gcc
   - genisoimage
   - guestfs-tools
