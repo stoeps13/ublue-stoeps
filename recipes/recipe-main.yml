@@ -4,8 +4,9 @@ name: ublue-stoeps-main
 # description will be included in the image's metadata
 description: My ublue image for my personal and working devices
 
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 40
+# base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/bluefin-dx
+image-version: latest
 
 modules:
   - from-file: common_modules/files.yml

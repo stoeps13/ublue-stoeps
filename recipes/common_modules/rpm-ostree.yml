@@ -8,6 +8,7 @@ install:
   - edk2-ovmf
   - epson-inkjet-printer-escpr
   - epson-inkjet-printer-escpr2
+  - fd
   - firewall-config
   - gcc
   - genisoimage
