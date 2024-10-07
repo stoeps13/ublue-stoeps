@@ -21,6 +21,7 @@ install:
   - libvirt-nss
   - lm_sensors
   - make
+  - mbsync
   - pass
   - pipewire
   - playerctl
@@ -38,6 +39,7 @@ install:
   - qemu-user-binfmt
   - qemu-user-static
   - tuxedo-control-center
+  - vdirsyncer
   - virt-install
   - virt-manager
   - virt-viewer
