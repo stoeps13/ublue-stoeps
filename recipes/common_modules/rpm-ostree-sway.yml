@@ -2,3 +2,6 @@
 type: rpm-ostree
 install:
   - gnome-keyring
+remove:
+  - firefox
+  - firefox-langpacks

@@ -44,6 +44,3 @@ install:
   - virt-viewer
   - wireguard-tools
   - wl-clipboard
-remove:
-  - firefox
-  - firefox-langpacks
