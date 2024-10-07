@@ -1,5 +1,7 @@
 ---
 type: rpm-ostree
+repos:
+  - https://rpm.tuxedocomputers.com/fedora/40/x86_64/base
 install:
   - alacritty
   - at
@@ -51,6 +53,7 @@ install:
   - qemu-user-static
   - stow
   - tmux
+  - tuxedo-control-center
   - vdirsyncer
   - vim
   - virt-install

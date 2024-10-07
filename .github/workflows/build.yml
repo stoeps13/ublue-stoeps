@@ -19,7 +19,7 @@ jobs:
           # !! Add your recipes here
           # - recipe-sericea-main.yml
           #- recipe-nvidia.yml
-          #- recipe-main.yml
+          - recipe-main.yml
           - recipe-sericea-main.yml
     steps:
        # the build is fully handled by the reusable github action
