@@ -3,8 +3,10 @@ type: rpm-ostree
 repos:
   # - tuxedo.repo # copies in .repo file from files/rpm-ostree/tuxedo.repo to /etc/yum.repos.d/
   - https://copr.fedorainfracloud.org/coprs/kallepm/tuxedo-drivers/repo/fedora-40/kallepm-tuxedo-drivers-fedora-40.repo
+  - https://copr.fedorainfracloud.org/coprs/kallepm/tuxedo-control-center/repo/fedora-40/kallepm-tuxedo-control-center-fedora-40.repo
 keys: 
   - https://download.copr.fedorainfracloud.org/results/kallepm/tuxedo-drivers/pubkey.gpg
+  - https://download.copr.fedorainfracloud.org/results/kallepm/tuxedo-control-center/pubkey.gpg
 # optfix:
 #   - tuxedo-control-center
 #   - tuxedo-drivers
@@ -46,6 +48,7 @@ install:
   - qemu-user-binfmt
   - qemu-user-static
   - tuxedo-drivers
+  - tuxedo-control-center
   - vdirsyncer
   - virt-install
   - virt-manager
