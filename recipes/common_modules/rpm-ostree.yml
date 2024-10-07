@@ -1,7 +1,7 @@
 ---
 type: rpm-ostree
 repos:
-  - https://rpm.tuxedocomputers.com/fedora/40/x86_64/base
+  - tuxedo.repo # copies in .repo file from files/rpm-ostree/tuxedo.repo to /etc/yum.repos.d/
 install:
   - alacritty
   - at
