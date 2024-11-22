@@ -31,6 +31,7 @@ install:
   - libvirt-nss
   - lm_sensors
   - make
+  - neovim
   - pass
   - pipewire
   - playerctl
