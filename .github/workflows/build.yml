@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: "00 18 * * */2"
   pull_request:
-  workflow_dispatch: # allow manually triggering builds
+  workflow_dispatch:
 jobs:
   bluebuild:
     name: Build Custom Image
@@ -13,16 +13,13 @@ jobs:
       packages: write
       id-token: write
     strategy:
-      fail-fast: false # stop GH from cancelling all matrix builds if one fails
+      fail-fast: false
       matrix:
         recipe:
-          # !! Add your recipes here
           - recipe-sericea-main.yml
-          #- recipe-nvidia.yml
           - recipe-main.yml
-          # - recipe-sericea-main.yml
+          - recipe-kinoite.yml
     steps:
-       # the build is fully handled by the reusable github action
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
         with:
