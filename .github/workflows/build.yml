@@ -17,10 +17,10 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - sericea.yml
-          - silverblue.yml
           - kinoite.yml
-          - bluefin.yml
+          - sericea.yml
+          # - silverblue.yml
+          # - bluefin.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
