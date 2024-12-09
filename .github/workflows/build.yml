@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   bluebuild:
-    name: Build Custom Image
+    name: ublue image
     runs-on: ubuntu-latest
     permissions:
       contents: read
