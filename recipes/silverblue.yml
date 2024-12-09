@@ -1,15 +1,16 @@
 ---
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-stoeps-nvidia
+name: ublue-stoeps-silverblue
 # description will be included in the image's metadata
 description: My ublue image for my personal and working devices
 
-base-image: ghcr.io/ublue-os/silverblue-nvidia
+# base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: latest
 
 modules:
   - from-file: common_modules/files.yml
-  - from-file: common_modules/akmods.yml
+  # - from-file: common_modules/akmods.yml
   - from-file: common_modules/bling.yml
   - from-file: common_modules/chezmoi.yml
   - from-file: common_modules/default-flatpaks.yml

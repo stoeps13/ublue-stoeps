@@ -1,3 +1,4 @@
+---
 name: bluebuild
 on:
   schedule:
@@ -16,9 +17,10 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - recipe-sericea-main.yml
-          - recipe-main.yml
-          - recipe-kinoite.yml
+          - sericea.yml
+          - silverblue.yml
+          - kinoite.yml
+          - bluefin.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
