@@ -1,4 +1,5 @@
 ---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 type: containerfile
 snippets:
   - COPY --from=cgr.dev/chainguard/dive:latest /usr/bin/dive /usr/bin/dive

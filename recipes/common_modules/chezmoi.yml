@@ -1,4 +1,5 @@
 ---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 type: chezmoi
 repository: "https://github.com/stoeps13/chezmoi-dotfiles"
 all-users: false

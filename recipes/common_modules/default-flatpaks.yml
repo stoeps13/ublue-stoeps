@@ -1,4 +1,5 @@
 ---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 type: default-flatpaks
 notify: true
 system:
@@ -25,7 +26,7 @@ system:
     - org.gnome.font-viewer
     - org.localsend.localsend_app
     - org.wezfurlong.wezterm
-  remove:
+  remove: []
   # - org.gnome.eog
   #
 # A flatpak repo can also be added without having to install flatpaks,
