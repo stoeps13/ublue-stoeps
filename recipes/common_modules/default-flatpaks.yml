@@ -6,38 +6,61 @@ system:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
   install:
-    - com.mattjakeman.ExtensionManager
-    - io.github.zen_browser.zen
-    - org.davmail.DavMail
-    - org.gnome.Calendar
-    - org.gnome.Characters
-    - org.gnome.Connections
-    - org.gnome.Contacts
-    - org.gnome.DejaDup
-    - org.gnome.Evince
-    - org.gnome.Logs
-    - org.gnome.Loupe
-    - org.gnome.Maps
-    - org.gnome.NautilusPreviewer
-    - org.gnome.TextEditor
-    - org.gnome.Weather
-    - org.gnome.baobab
-    - org.gnome.clocks
-    - org.gnome.font-viewer
-    - org.localsend.localsend_app
-    - org.wezfurlong.wezterm
-  remove: []
-  # - org.gnome.eog
-  #
-# A flatpak repo can also be added without having to install flatpaks,
-# as long as one of the repo- fields is present
-user:
-  repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-  repo-name: flathub
-  install:
     - com.bitwarden.desktop
+    - com.calibre_ebook.calibre
+    - com.discordapp.Discord
+    - com.github.IsmaelMartinez.teams_for_linux
+    - com.github.maoschanz.drawing
+    - com.github.rafostar.Clapper
+    - com.github.skylot.jadx
     - com.github.tchx84.Flatseal
-    - com.logseq.Logseq
+    - com.google.Chrome
+    - com.jgraph.drawio.desktop
+    - com.obsproject.Studio
+    - com.slack.Slack
+    - hu.irl.cameractrls
+    - im.riot.Riot
+    - in.cinny.Cinny
+    - io.dbeaver.DBeaverCommunity
+    - io.github.dvlv.boxbuddyrs
+    - io.github.flattool.Warehouse
     - io.github.java_decompiler.jd-gui
+    - io.github.martchus.syncthingtray
+    - io.github.ungoogled_software.ungoogled_chromium
+    - io.github.zen_browser.zen
+    - io.podman_desktop.PodmanDesktop
+    - net.scribus.Scribus
+    - org.apache.directory.studio
+    - org.blender.Blender
     - org.cryptomator.Cryptomator
+    - org.davmail.DavMail
+    - org.fedoraproject.MediaWriter
+    - org.gimp.GIMP
+    - org.gnome.meld
+    - org.gtk.Gtk3theme.Adapta
+    - org.gtk.Gtk3theme.Adwaita-dark
+    - org.gtk.Gtk3theme.adw-gtk3-dark
+    - org.gustavoperedo.FontDownloader
+    - org.inkscape.Inkscape
+    - org.kde.KStyle.Adwaita
+    - org.kde.KStyle.Kvantum
+    - org.kde.Platform
+    - org.kde.PlatformTheme.QGnomePlatform
+    - org.kde.WaylandDecoration.QAdwaitaDecorations
+    - org.kde.WaylandDecoration.QGnomePlatform-decoration
+    - org.kde.kdenlive
+    - org.kde.krita
+    - org.keepassxc.KeePassXC
+    - org.ksnip.ksnip
+    - org.libreoffice.LibreOffice
+    - org.mozilla.firefox
+    - org.pulseaudio.pavucontrol
+    - org.signal.Signal
+    - org.torproject.torbrowser-launcher
+    - org.wezfurlong.wezterm
+    - org.wireshark.Wireshark
+    - org.zaproxy.ZAP
+    - social.whalebird.WhalebirdDesktop
     - us.zoom.Zoom
+  remove: []
+  #
