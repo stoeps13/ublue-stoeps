@@ -17,9 +17,9 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - kinoite.yml
-          - sericea.yml
-          # - silverblue.yml
+          #- kinoite.yml
+          #- sericea.yml
+          - silverblue.yml
           # - bluefin.yml
     steps:
       - name: Build Custom Image
