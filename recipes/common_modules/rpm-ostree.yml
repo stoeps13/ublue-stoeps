@@ -3,6 +3,7 @@
 type: rpm-ostree
 repos:
   - https://copr.fedorainfracloud.org/coprs/kallepm/tuxedo-control-center/repo/fedora-%OS_VERSION%/kallepm-tuxedo-control-center-fedora-%OS_VERSION%.repo
+  - https://copr.fedorainfracloud.org/coprs/kallepm/tuxedo-drivers/repo/fedora-%OS_VERSION%/kallepm-tuxedo-drivers-fedora-%OS_VERSION%.repo
 install:
   - alacritty
   - at
@@ -42,6 +43,7 @@ install:
   - qemu-user-binfmt
   - qemu-user-static
   - tuxedo-control-center
+  - tuxedo-drivers
   - vdirsyncer
   - virt-install
   - virt-manager
