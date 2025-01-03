@@ -1,8 +1,7 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 type: rpm-ostree
-repos:
-  - https://download.copr.fedorainfracloud.org/results/pgdev/ghostty/fedora-%OS_VERSION%-x86_64/
+repos: []
 install:
   - alacritty
   - at
