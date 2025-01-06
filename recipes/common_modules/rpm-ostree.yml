@@ -45,7 +45,7 @@ install:
   - qemu-system-x86-core
   - qemu-user-binfmt
   - qemu-user-static
-  - rpmspectool
+  - rpmdevtools
   - vdirsyncer
   - virt-install
   - virt-manager
