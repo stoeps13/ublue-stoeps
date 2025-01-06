@@ -23,6 +23,7 @@ install:
   - kitty
   - kitty-kitten
   - kitty-terminfo
+  - kmodtool
   - libvirt
   - libvirt-nss
   - lm_sensors
