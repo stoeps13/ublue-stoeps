@@ -17,6 +17,8 @@ install:
   - ghostty
   - guestfs-tools
   - kernel-devel
+  - kernel-devel
+  - kernel-headers
   - kernel-headers
   - kitty
   - kitty-kitten
