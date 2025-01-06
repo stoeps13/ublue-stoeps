@@ -52,3 +52,5 @@ install:
   - virt-viewer
   - wireguard-tools
   - wl-clipboard
+  - kmod-tuxedo-drivers-6.12.7-200.fc41.x86_64-4.11.7-1.fc41.x86_64.rpm
+  - tuxedo-drivers-kmod-common-4.11.7-1.fc41.x86_64.rpm
