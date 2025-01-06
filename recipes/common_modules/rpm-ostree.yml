@@ -5,6 +5,7 @@ repos: []
 install:
   - alacritty
   - at
+  - copr-rpmbuild
   - edk2-ovmf
   - epson-inkjet-printer-escpr
   - epson-inkjet-printer-escpr2
@@ -41,6 +42,7 @@ install:
   - qemu-system-x86-core
   - qemu-user-binfmt
   - qemu-user-static
+  - rpmspectool
   - vdirsyncer
   - virt-install
   - virt-manager
