@@ -50,6 +50,7 @@ install:
   - virt-install
   - virt-manager
   - virt-viewer
+  - waydroid
   - wireguard-tools
   - wl-clipboard
   - kmod-tuxedo-drivers-6.12.7-200.fc41.x86_64-4.11.7-1.fc41.x86_64.rpm
