@@ -19,7 +19,6 @@ system:
     - com.obsproject.Studio
     - com.slack.Slack
     - hu.irl.cameractrls
-    - im.riot.Riot
     - in.cinny.Cinny
     - io.dbeaver.DBeaverCommunity
     - io.github.dvlv.boxbuddyrs
@@ -64,3 +63,9 @@ system:
     - us.zoom.Zoom
   remove: []
   #
+user:
+  # repo-name will overwrite the previously-configured repo-name for the user remote
+  repo-name: flathub-user
+  repo-title: "Flathub (User)"
+  install:
+    - im.riot.Riot
