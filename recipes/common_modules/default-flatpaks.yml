@@ -57,7 +57,6 @@ system:
     - org.signal.Signal
     - org.torproject.torbrowser-launcher
     - org.wezfurlong.wezterm
-    - org.wireshark.Wireshark
     - org.zaproxy.ZAP
     - social.whalebird.WhalebirdDesktop
     - us.zoom.Zoom
