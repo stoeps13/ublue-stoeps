@@ -16,7 +16,6 @@ system:
     - com.github.tchx84.Flatseal
     - com.google.Chrome
     - com.jgraph.drawio.desktop
-    - com.obsproject.Studio
     - com.slack.Slack
     - hu.irl.cameractrls
     - in.cinny.Cinny
@@ -63,8 +62,8 @@ system:
   remove: []
   #
 user:
-  # repo-name will overwrite the previously-configured repo-name for the user remote
   repo-name: flathub-user
   repo-title: "Flathub (User)"
   install:
     - im.riot.Riot
+    - com.obsproject.Studio
