@@ -16,6 +16,7 @@ system:
     - com.github.tchx84.Flatseal
     - com.google.Chrome
     - com.jgraph.drawio.desktop
+    - com.obsproject.Studio
     - com.slack.Slack
     - hu.irl.cameractrls
     - in.cinny.Cinny
@@ -66,4 +67,3 @@ user:
   repo-title: "Flathub (User)"
   install:
     - im.riot.Riot
-    - com.obsproject.Studio
