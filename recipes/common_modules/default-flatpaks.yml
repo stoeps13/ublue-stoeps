@@ -36,7 +36,7 @@ system:
     - org.fedoraproject.MediaWriter
     - org.gimp.GIMP
     - org.gnome.meld
-    - org.gtk.Gtk3theme.Adapta
+    - org.gtk.Gtk3theme.Adapta-Nokto
     - org.gtk.Gtk3theme.Adwaita-dark
     - org.gtk.Gtk3theme.adw-gtk3-dark
     - org.gustavoperedo.FontDownloader
