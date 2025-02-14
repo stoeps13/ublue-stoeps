@@ -3,4 +3,4 @@
 type: script
 scripts:
   - workarounds.sh
-  - build-tuxedo.sh
+  #- build-tuxedo.sh
