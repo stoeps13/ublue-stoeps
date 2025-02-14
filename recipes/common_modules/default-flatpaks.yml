@@ -38,8 +38,6 @@ system:
     - org.gnome.meld
     - org.gustavoperedo.FontDownloader
     - org.inkscape.Inkscape
-    - org.kde.KStyle.Adwaita
-    - org.kde.KStyle.Kvantum
     - org.kde.Platform
     - org.kde.PlatformTheme.QGnomePlatform
     - org.kde.WaylandDecoration.QAdwaitaDecorations
@@ -60,6 +58,8 @@ system:
     # - org.gtk.Gtk3theme.Adapta-Nokto
     # - org.gtk.Gtk3theme.Adwaita-dark
     # - org.gtk.Gtk3theme.adw-gtk3-dark
+    # - org.kde.KStyle.Adwaita
+    # - org.kde.KStyle.Kvantum
   remove: []
   #
 user:
