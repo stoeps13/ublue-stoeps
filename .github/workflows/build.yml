@@ -20,6 +20,7 @@ jobs:
           #- kinoite.yml
           #- sericea.yml
           - silverblue.yml
+          - bluefin-rs.yml
           # - bluefin.yml
     steps:
       - name: Build Custom Image

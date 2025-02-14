@@ -1,0 +1,25 @@
+---
+# image will be published to ghcr.io/<user>/<name>
+name: ublue-stoeps-bluefin-rs
+# description will be included in the image's metadata
+description: My ublue image for my personal and working devices
+
+# base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/brickman240/tuxedo-rs-bluefin-dx
+image-version: latest
+
+modules:
+  - from-file: common_modules/files.yml
+  # - from-file: common_modules/akmods.yml
+  - from-file: common_modules/bling.yml
+  - from-file: common_modules/chezmoi.yml
+  - from-file: common_modules/default-flatpaks.yml
+  - from-file: common_modules/fonts.yml
+  - from-file: common_modules/gschema-overrides.yml
+  - from-file: common_modules/rpm-ostree.yml
+  - from-file: common_modules/rpm-ostree-gnome.yml
+  - from-file: common_modules/yafti.yml
+  - from-file: common_modules/systemd.yml
+  - from-file: common_modules/script.yml
+  - from-file: common_modules/containerfile.yml
+  - type: signing
