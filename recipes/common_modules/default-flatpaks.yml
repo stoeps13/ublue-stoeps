@@ -38,28 +38,17 @@ system:
     - org.gnome.meld
     - org.gustavoperedo.FontDownloader
     - org.inkscape.Inkscape
-    - org.kde.Platform
-    - org.kde.PlatformTheme.QGnomePlatform
-    - org.kde.WaylandDecoration.QAdwaitaDecorations
-    - org.kde.WaylandDecoration.QGnomePlatform-decoration
     - org.kde.kdenlive
     - org.kde.krita
     - org.keepassxc.KeePassXC
-    - org.ksnip.ksnip
     - org.libreoffice.LibreOffice
     - org.mozilla.firefox
     - org.pulseaudio.pavucontrol
     - org.signal.Signal
     - org.torproject.torbrowser-launcher
-    - org.wezfurlong.wezterm
     - org.zaproxy.ZAP
     - social.whalebird.WhalebirdDesktop
     - us.zoom.Zoom
-    # - org.gtk.Gtk3theme.Adapta-Nokto
-    # - org.gtk.Gtk3theme.Adwaita-dark
-    # - org.gtk.Gtk3theme.adw-gtk3-dark
-    # - org.kde.KStyle.Adwaita
-    # - org.kde.KStyle.Kvantum
   remove: []
   #
 user:
