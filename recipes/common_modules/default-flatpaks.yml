@@ -6,6 +6,7 @@ system:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
   install:
+    - app.zen_browser.zen
     - com.bitwarden.desktop
     - com.calibre_ebook.calibre
     - com.discordapp.Discord
@@ -27,7 +28,6 @@ system:
     - io.github.java_decompiler.jd-gui
     - io.github.martchus.syncthingtray
     - io.github.ungoogled_software.ungoogled_chromium
-    - io.github.zen_browser.zen
     - io.podman_desktop.PodmanDesktop
     - net.scribus.Scribus
     - org.apache.directory.studio
