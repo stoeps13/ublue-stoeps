@@ -18,6 +18,7 @@ modules:
   - from-file: common_modules/gschema-overrides.yml
   - from-file: common_modules/rpm-ostree.yml
   - from-file: common_modules/rpm-ostree-gnome.yml
+  - from-file: common_modules/rpm-ostree-remove.yml
   #- from-file: common_modules/yafti.yml
   - from-file: common_modules/systemd.yml
   - from-file: common_modules/script.yml

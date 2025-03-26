@@ -55,5 +55,3 @@ install:
   - wireguard-tools
   - wireshark
   - wl-clipboard
-remove:
-  - mkisofs
