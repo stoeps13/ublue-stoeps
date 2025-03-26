@@ -28,7 +28,6 @@ install:
   - libvirt-nss
   - lm_sensors
   - make
-  - mkisofs
   - neovim
   - pass
   - pipewire
@@ -56,3 +55,6 @@ install:
   - wireguard-tools
   - wireshark
   - wl-clipboard
+uninstall:
+  - mkisofs
+
