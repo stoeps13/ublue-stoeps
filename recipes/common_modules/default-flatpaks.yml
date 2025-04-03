@@ -33,7 +33,6 @@ system:
     - org.apache.directory.studio
     - org.blender.Blender
     - org.cryptomator.Cryptomator
-    - org.davmail.DavMail
     - org.fedoraproject.MediaWriter
     - org.gimp.GIMP
     - org.gnome.meld
