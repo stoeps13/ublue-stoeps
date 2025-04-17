@@ -6,7 +6,7 @@ description: My ublue image for my personal and working devices
 
 # base-image: ghcr.io/ublue-os/silverblue-main
 base-image: ghcr.io/ublue-os/silverblue-main
-image-version: latest
+image-version: 41
 
 modules:
   - from-file: common_modules/files.yml
