@@ -7,14 +7,12 @@ install:
   - at
   - copr-rpmbuild
   - edk2-ovmf
-  - epson-inkjet-printer-escpr
-  - epson-inkjet-printer-escpr2
   - fd-find
   - firewall-config
   - fzf
   - gcc
   - ghostty
-  - gnome-shell-extension-appindicator 
+  - gnome-shell-extension-appindicator
   - gnome-tweaks
   - guestfs-tools
   - kernel-devel
