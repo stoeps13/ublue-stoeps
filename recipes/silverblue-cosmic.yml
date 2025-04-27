@@ -5,7 +5,7 @@ name: ublue-stoeps-cosmic
 description: My ublue image for my personal and working devices
 
 # base-image: ghcr.io/ublue-os/silverblue-main
-base-image: ghcr.io/brickman240/tuxedo-bluefin-dx
+base-image: ghcr.io/ublue-os/cosmic-atomic-main
 image-version: latest
 
 modules:
@@ -17,7 +17,7 @@ modules:
   - from-file: common_modules/fonts.yml
   - from-file: common_modules/gschema-overrides.yml
   - from-file: common_modules/rpm-ostree.yml
-  - from-file: common_modules/rpm-ostree-gnome.yml
+  #- from-file: common_modules/rpm-ostree-gnome.yml
   #- from-file: common_modules/yafti.yml
   - from-file: common_modules/systemd.yml
   - from-file: common_modules/script.yml
