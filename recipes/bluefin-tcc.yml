@@ -5,7 +5,8 @@ name: ublue-stoeps-bluefin-rs
 description: My ublue image for my personal and working devices
 
 # base-image: ghcr.io/ublue-os/silverblue-main
-base-image: ghcr.io/brickman240/tuxedo-bluefin-dx
+# base-image: ghcr.io/brickman240/tuxedo-bluefin-dx
+base-image: ghcr.io/brickman240/tuxedo-bazzite-gnome
 image-version: latest
 
 modules:
