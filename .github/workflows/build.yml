@@ -21,6 +21,7 @@ jobs:
           #- sericea.yml
           - silverblue.yml
           - bluefin-tcc.yml
+          - silverblue-cosmic.yml
           # - bluefin.yml
     steps:
       - name: Build Custom Image
