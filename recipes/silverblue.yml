@@ -16,6 +16,8 @@ modules:
   - from-file: common_modules/default-flatpaks.yml
   - from-file: common_modules/fonts.yml
   - from-file: common_modules/gschema-overrides.yml
+  #- from-file: common_modules/dnf.yml
+  #- from-file: common_modules/dnf-gnome.yml
   - from-file: common_modules/rpm-ostree.yml
   - from-file: common_modules/rpm-ostree-gnome.yml
   - from-file: common_modules/yafti.yml
