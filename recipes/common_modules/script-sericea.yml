@@ -1,7 +1,0 @@
----
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-type: script
-scripts:
-  # this sets up the proper policy & signing files for signed images to work
-  # - signing.sh
-  - workarounds-sericea.sh

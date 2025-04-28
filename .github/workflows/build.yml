@@ -17,12 +17,8 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          #- kinoite.yml
-          #- sericea.yml
           - silverblue.yml
           - bluefin-tcc.yml
-          - silverblue-cosmic.yml
-          # - bluefin.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
