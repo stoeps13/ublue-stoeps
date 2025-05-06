@@ -18,7 +18,6 @@ jobs:
       matrix:
         recipe:
           - silverblue.yml
-          - bluefin-tcc.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
