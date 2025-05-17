@@ -5,6 +5,8 @@ fonts:
   nerd-fonts:
     - FiraCode
     - SourceCodePro
+    - CaskaydiaCove
+    - Hack
   google-fonts:
     - Lato
     - Open Sans
