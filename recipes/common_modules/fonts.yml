@@ -5,7 +5,7 @@ fonts:
   nerd-fonts:
     - FiraCode
     - SourceCodePro
-    - CaskadiaCode
+    - CascadiaCode
     - Hack
   google-fonts:
     - Lato
