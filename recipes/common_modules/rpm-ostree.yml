@@ -16,9 +16,8 @@ install:
   - gnome-tweaks
   - guestfs-tools
   - kernel-devel
-  - kernel-devel
   - kernel-headers
-  - kernel-headers
+  - realtime-setup
   - kitty
   - kitty-kitten
   - kitty-terminfo
