@@ -6,13 +6,19 @@ system:
   repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
   repo-name: flathub
   install:
+    # - com.github.rafostar.Clapper
+    # - in.cinny.Cinny
+    # - io.github.dvlv.boxbuddyrs
+    # - io.podman_desktop.PodmanDesktop
+    # - org.fedoraproject.MediaWriter
+    # - social.whalebird.WhalebirdDesktop
+    # - us.zoom.Zoom
     - app.zen_browser.zen
     - com.bitwarden.desktop
     - com.calibre_ebook.calibre
     - com.discordapp.Discord
     - com.github.IsmaelMartinez.teams_for_linux
     - com.github.maoschanz.drawing
-    - com.github.rafostar.Clapper
     - com.github.skylot.jadx
     - com.github.tchx84.Flatseal
     - com.google.Chrome
@@ -21,19 +27,15 @@ system:
     - com.slack.Slack
     - hu.irl.cameractrls
     - im.riot.Riot
-    - in.cinny.Cinny
     - io.dbeaver.DBeaverCommunity
-    - io.github.dvlv.boxbuddyrs
     - io.github.flattool.Warehouse
     - io.github.java_decompiler.jd-gui
     - io.github.martchus.syncthingtray
     - io.github.ungoogled_software.ungoogled_chromium
-    - io.podman_desktop.PodmanDesktop
     - net.scribus.Scribus
     - org.apache.directory.studio
     - org.blender.Blender
     - org.cryptomator.Cryptomator
-    - org.fedoraproject.MediaWriter
     - org.gimp.GIMP
     - org.gnome.meld
     - org.gustavoperedo.FontDownloader
@@ -47,8 +49,6 @@ system:
     - org.signal.Signal
     - org.torproject.torbrowser-launcher
     - org.zaproxy.ZAP
-    - social.whalebird.WhalebirdDesktop
-    - us.zoom.Zoom
   remove: []
   #
 user:
