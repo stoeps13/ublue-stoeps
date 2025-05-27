@@ -19,6 +19,7 @@ jobs:
         recipe:
           - silverblue.yml
           - bluefin-tcc.yml
+          - aurora-tcc.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
