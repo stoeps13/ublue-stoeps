@@ -8,5 +8,6 @@ fonts:
     - CascadiaCode
     - Hack
   google-fonts:
+    - Fira Sans
     - Lato
     - Open Sans
