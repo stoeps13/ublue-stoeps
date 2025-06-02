@@ -2,7 +2,7 @@
 name: build bluefin
 on:
   schedule:
-    - cron: "00 18 * * */2"
+    - cron: "30 18 * * 0"
   pull_request:
   workflow_dispatch:
 jobs:

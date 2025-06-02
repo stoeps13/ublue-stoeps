@@ -2,7 +2,7 @@
 name: build silverblue
 on:
   schedule:
-    - cron: "00 18 * * */2"
+    - cron: "00 19 * * 1"
   pull_request:
   workflow_dispatch:
 jobs:
