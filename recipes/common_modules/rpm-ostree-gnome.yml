@@ -8,6 +8,8 @@ install:
   - git
   - glib2-devel
   - gnome-shell-extension-appindicator
+  - gnome-tweaks
+  - gnome-shell-extension-appindicator
   - gnome-shell-extension-blur-my-shell
   - gnome-shell-extension-caffeine
   - gnome-shell-extension-dash-to-dock

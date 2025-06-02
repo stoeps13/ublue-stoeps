@@ -1,7 +1,8 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 type: rpm-ostree
-repos: []
+repos:
+  - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-41/pgdev-ghostty-fedora-41.repo
 install:
   - alacritty
   - at
@@ -12,44 +13,27 @@ install:
   - fzf
   - gcc
   - ghostty
-  - gnome-shell-extension-appindicator
-  - gnome-tweaks
   - guestfs-tools
-  - kernel-devel
-  - kernel-headers
-  - realtime-setup
-  - kitty
-  - kitty-kitten
-  - kitty-terminfo
   - kmodtool
-  - libvirt
-  - libvirt-nss
+  - libvirt-daemon
+  - libvirt-daemon-config-network
+  - libvirt-daemon-driver-interface
+  - libvirt-daemon-driver-network
+  - libvirt-daemon-driver-nwfilter
+  - libvirt-daemon-driver-qemu
+  - libvirt-daemon-driver-secret
+  - libvirt-daemon-driver-storage-core
   - lm_sensors
   - make
-  - neovim
   - pass
   - pipewire
   - playerctl
-  - podman-compose
-  - podmansh
-  - python3-libvirt
   - python3-tmuxp
-  - qemu
-  - qemu-char-spice
-  - qemu-device-display-virtio-gpu
-  - qemu-device-display-virtio-vga
-  - qemu-device-usb-redirect
-  - qemu-img
-  - qemu-system-x86-core
-  - qemu-user-binfmt
-  - qemu-user-static
-  - tcpdump
+  - qemu-kvm
+  - realtime-setup
   - rpmdevtools
+  - tcpdump
   - vdirsyncer
-  - virt-install
-  - virt-manager
-  - virt-viewer
-  - waydroid
   - wireguard-tools
   - wireshark
   - wl-clipboard
