@@ -29,7 +29,6 @@ install:
   - libgda-sqlite
   - libratbag-ratbagd
   - nautilus-gsconnect
-  - nautilus-open-any-terminal
   - openssh-askpass
   - simple-scan
   - zenity
