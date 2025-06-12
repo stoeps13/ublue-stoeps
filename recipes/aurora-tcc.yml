@@ -5,7 +5,7 @@ name: aurora-stoeps-dx
 description: My ublue image for my personal and working devices
 
 # base-image: ghcr.io/ublue-os/silverblue-main
-base-image: ghcr.io/brickman240/tuxedo-aurora-dx
+base-image: ghcr.io/ublue-os/aurora-dx
 image-version: latest
 
 modules:

@@ -2,7 +2,9 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 type: rpm-ostree
 repos:
-  - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-41/pgdev-ghostty-fedora-41.repo
+  # - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-41/pgdev-ghostty-fedora-41.repo
+  - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-42/pgdev-ghostty-fedora-42.repo
+  - https://copr.fedorainfracloud.org/coprs/gladion136/tuxedo-drivers-kmod/repo/fedora-42/gladion136-tuxedo-drivers-kmod-fedora-42.repo
 install:
   - alacritty
   - at
@@ -33,6 +35,8 @@ install:
   - realtime-setup
   - rpmdevtools
   - tcpdump
+  - tuxedo-drivers-kmod
+  - tuxedo-drivers-kmod-common
   - vdirsyncer
   - wireguard-tools
   - wireshark
