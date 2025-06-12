@@ -17,6 +17,7 @@ install:
   - ghostty
   - guestfs-tools
   - kmodtool
+  - ksshaskpass
   - libvirt-daemon
   - libvirt-daemon-config-network
   - libvirt-daemon-driver-interface
