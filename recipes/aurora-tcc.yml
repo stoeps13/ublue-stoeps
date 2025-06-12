@@ -5,7 +5,8 @@ name: aurora-stoeps-dx
 description: My ublue image for my personal and working devices
 
 # base-image: ghcr.io/ublue-os/silverblue-main
-base-image: ghcr.io/ublue-os/aurora-dx
+# base-image: ghcr.io/ublue-os/aurora-dx
+base-image: ghcr.io/brickman240/tuxedo-aurora-dx
 image-version: latest
 
 modules:
@@ -17,6 +18,7 @@ modules:
   - from-file: common_modules/fonts.yml
   # - from-file: common_modules/gschema-overrides.yml
   - from-file: common_modules/rpm-ostree.yml
+  - from-file: common_modules/rpm-ostree-kde.yml
   # - from-file: common_modules/rpm-ostree-gnome.yml
   #- from-file: common_modules/dnf.yml
   #- from-file: common_modules/dnf-gnome.yml
