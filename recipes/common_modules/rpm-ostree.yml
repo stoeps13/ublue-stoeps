@@ -6,17 +6,9 @@ repos:
   - https://copr.fedorainfracloud.org/coprs/pgdev/ghostty/repo/fedora-41/pgdev-ghostty-fedora-41.repo
   # - https://copr.fedorainfracloud.org/coprs/gladion136/tuxedo-drivers-kmod/repo/fedora-42/gladion136-tuxedo-drivers-kmod-fedora-42.repo
 install:
-  - alacritty
-  - at
-  - copr-rpmbuild
-  - edk2-ovmf
-  - fd-find
   - firewall-config
-  - fzf
-  - gcc
   - ghostty
   - guestfs-tools
-  - kmodtool
   - libvirt-daemon
   - libvirt-daemon-config-network
   - libvirt-daemon-driver-interface
@@ -26,16 +18,13 @@ install:
   - libvirt-daemon-driver-secret
   - libvirt-daemon-driver-storage-core
   - lm_sensors
-  - make
   - pass
   - pipewire
   - playerctl
   - python3-tmuxp
   - qemu-kvm
   - realtime-setup
-  - rpmdevtools
   - tcpdump
-  - vdirsyncer
   - wireguard-tools
   - wireshark
   - wl-clipboard
