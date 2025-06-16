@@ -1,6 +1,6 @@
 ---
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-stoeps-bluefin-rs
+name: ublue-stoeps-bluefin
 # description will be included in the image's metadata
 description: My ublue image for my personal and working devices
 
