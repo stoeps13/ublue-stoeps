@@ -10,7 +10,7 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 /usr/libexec/gdm-runtime-config set daemon WaylandEnable false
 
 # Edit vdirsyncer google.py to make it work with gmail
-sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(find /usr/lib -name google.py | grep vdirsyncer)
+# sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(find /usr/lib -name google.py | grep vdirsyncer)
 
 # Clean up repos, everything is on the image so we don't need them
 for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
