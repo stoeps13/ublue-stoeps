@@ -12,6 +12,7 @@ repos:
 install:
   skip-unavailable: true
   skip-broken: true
+  allow-erasing: true
   packages:
     - firewall-config
     - ghostty
