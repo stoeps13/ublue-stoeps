@@ -3,6 +3,8 @@
 type: dnf
 repos:
   cleanup: true
+  files:
+    - https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-42/scottames-ghostty-fedora-42.repo
   keys:
     - https://rpm.tuxedocomputers.com/fedora/42/0x54840598.pub.asc
   copr:
@@ -33,6 +35,4 @@ install:
     - tcpdump
     - wireguard-tools
     - wl-clipboard
-    - repo: https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-42/scottames-ghostty-fedora-42.repo
-      packages:
-        - ghostty
+    - ghostty
