@@ -7,7 +7,7 @@ repos:
     - https://rpm.tuxedocomputers.com/fedora/42/0x54840598.pub.asc
   copr:
     enable:
-      - pgdev/ghostty
+      - scottames/ghostty
 
 install:
   skip-unavailable: true
@@ -15,7 +15,6 @@ install:
   allow-erasing: true
   packages:
     - firewall-config
-    - ghostty
     - guestfs-tools
     - libvirt-daemon
     - libvirt-daemon-config-network
@@ -34,3 +33,6 @@ install:
     - tcpdump
     - wireguard-tools
     - wl-clipboard
+    - repo: https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-${VERSION_ID}/scottames-ghostty-fedora-${VERSION_ID}.repo
+      packages:
+        - ghostty
