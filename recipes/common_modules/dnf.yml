@@ -1,0 +1,34 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+type: dnf
+repos:
+  cleanup: true
+  keys:
+    - https://rpm.tuxedocomputers.com/fedora/42/0x54840598.pub.asc
+  copr:
+    enable:
+      - pgdev/ghostty
+
+install:
+  skip-unavailable: true
+  packages:
+    - firewall-config
+    - ghostty
+    - guestfs-tools
+    - libvirt-daemon
+    - libvirt-daemon-config-network
+    - libvirt-daemon-driver-interface
+    - libvirt-daemon-driver-network
+    - libvirt-daemon-driver-nwfilter
+    - libvirt-daemon-driver-qemu
+    - libvirt-daemon-driver-secret
+    - libvirt-daemon-driver-storage-core
+    - lm_sensors
+    - pass
+    - pipewire
+    - playerctl
+    - qemu-kvm
+    - realtime-setup
+    - tcpdump
+    - wireguard-tools
+    - wl-clipboard
