@@ -4,10 +4,12 @@ type: dnf
 repos:
   copr:
     - ublue-os/staging
+    - scottames/ghostty
 install:
   packages:
     - dconf
     - git
+    - ghostty
     - glib2-devel
     - gnome-shell-extension-appindicator
     - gnome-tweaks
