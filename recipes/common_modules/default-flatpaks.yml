@@ -6,6 +6,7 @@ configurations:
     scope: system
     install:
       - app.zen_browser.zen
+      - be.alexandervanhee.gradia
       - com.bitwarden.desktop
       - com.calibre_ebook.calibre
       - com.discordapp.Discord
