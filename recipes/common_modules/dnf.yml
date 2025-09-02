@@ -11,6 +11,7 @@ repos:
 
 install:
   packages:
+    - cargo
     - firewall-config
     - guestfs-tools
     - libvirt-daemon
