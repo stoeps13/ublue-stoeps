@@ -19,6 +19,7 @@ cd espanso
 # Compile espanso in release mode
 # NOTE: this will take a while (~5/15 minutes)
 cargo build -p espanso --release --no-default-features --features modulo,vendored-tls,wayland
+mkdir -p /usr/local/bin
 mv target/release/espanso /usr/local/bin/espanso
 cd /usr/src
 rm -rf espanso
