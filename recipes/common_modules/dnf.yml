@@ -12,7 +12,9 @@ repos:
 install:
   packages:
     - cargo
+    - dbus-devel
     - firewall-config
+    - gcc-c++
     - guestfs-tools
     - libvirt-daemon
     - libvirt-daemon-config-network
@@ -22,6 +24,7 @@ install:
     - libvirt-daemon-driver-qemu
     - libvirt-daemon-driver-secret
     - libvirt-daemon-driver-storage-core
+    - libxkbcommon-devel
     - lm_sensors
     - pass
     - pipewire
@@ -31,3 +34,8 @@ install:
     - tcpdump
     - wireguard-tools
     - wl-clipboard
+    - wxGTK-devel.x86_64
+group-install:
+  with-optional: true
+    packages: 
+      - development-tools
