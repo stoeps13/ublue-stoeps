@@ -1,7 +1,15 @@
 type: gnome-extensions
 install:
+  - AppIndicator and KStatusNotifierItem Support
+  - Blur my Shell
+  - Caffeine
+  - Control monitor brightness and volume with ddcutil
+  - Dash to Dock
+  - GSConnect
   - Just Perfection
+  - Logo Menu
+  - Search Light
+  - Tailscale QS
   - Tiling Shell
   - Wiggle
-  - Control monitor brightness and volume with ddcutil
 uninstall: []

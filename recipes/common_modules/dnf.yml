@@ -12,10 +12,8 @@ repos:
 
 install:
   packages:
-    - dbus-devel
     - espanso-wayland
     - firewall-config
-    - gcc-c++
     - guestfs-tools
     - libvirt-daemon
     - libvirt-daemon-config-network
@@ -34,7 +32,6 @@ install:
     - tcpdump
     - wireguard-tools
     - wl-clipboard
-    - wxGTK-devel.x86_64
 # group-install:
 #   with-optional: true
 #   packages:
