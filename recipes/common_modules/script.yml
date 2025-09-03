@@ -3,5 +3,5 @@
 type: script
 scripts:
   - workarounds.sh
-  - espanso.sh
+  #- espanso.sh
   #- build-tuxedo.sh
