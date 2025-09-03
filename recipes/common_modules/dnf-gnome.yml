@@ -12,6 +12,8 @@ install:
     - ghostty
     - glib2-devel
     - gnome-tweaks
+    - gnome-shell-extension-gsconnect
+    - gnome-shell-extension-search-light
     - gnome-shell-theme-yaru.noarch
     - yaru-gtk2-theme.noarch
     - yaru-gtk3-theme.noarch
