@@ -11,6 +11,7 @@ repos:
       - eclipseo/espanso
 
 install:
+  skip-unavailable: true
   packages:
     - distrobox
     - espanso-wayland
@@ -41,5 +42,12 @@ install:
 #   packages:
 #     - development-tools
 remove:
+  skip-unavailable: true
   packages:
     - toolbox
+    - docker-ce
+    - docker-ce-cli
+    - docker-ce
+    - docker-ce-rootless-extras
+    - docker-compose-plugin
+    - docker-buildx-plugin
