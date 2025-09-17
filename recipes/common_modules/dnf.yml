@@ -12,6 +12,7 @@ repos:
 
 install:
   packages:
+    - distrobox
     - espanso-wayland
     - firewall-config
     - guestfs-tools
@@ -27,6 +28,9 @@ install:
     - pass
     - pipewire
     - playerctl
+    - podman
+    - podman-docker
+    - podman-compose
     - qemu-kvm
     - realtime-setup
     - tcpdump
@@ -36,3 +40,6 @@ install:
 #   with-optional: true
 #   packages:
 #     - development-tools
+remove:
+  packages:
+    - toolbox
