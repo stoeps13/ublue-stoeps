@@ -21,8 +21,8 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - bluefin-tcc.yml
-          - bluefin-dx.yml
+          #- bluefin-tcc.yml
+          #- bluefin-dx.yml
           - silverblue-tcc.yml
           - silverblue.yml
     steps:
