@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 type: dnf
 repos:
   cleanup: true
@@ -42,7 +42,6 @@ install:
 #   packages:
 #     - development-tools
 remove:
-  skip-unavailable: true
   packages:
     - toolbox
     - docker-ce

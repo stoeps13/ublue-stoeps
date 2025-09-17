@@ -1,13 +1,17 @@
 ---
-name: build bluefin
+name: build ublue-stoeps
 on:
   schedule:
     - cron: "30 18 * * 0"
   pull_request:
   workflow_dispatch:
+concurrency:
+  # only run one build at a time
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
 jobs:
   bluebuild:
-    name: ublue image
+    name: Build ublue-stoeps image
     runs-on: ubuntu-latest
     permissions:
       contents: read
