@@ -1,7 +1,7 @@
 image = Image("main.png");
 
 pos_x = Window.GetWidth()/2 - image.GetWidth()/2;
-pos_y = Window.GetHeight()/4 - image.GetHeight();
+pos_y = Window.GetHeight() - image.GetHeight() - 30;
 
 sprite = Sprite(image);
 sprite.SetX(pos_x);
