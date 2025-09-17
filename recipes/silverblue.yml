@@ -22,6 +22,6 @@ modules:
   - from-file: common_modules/dnf-gnome.yml
   - from-file: common_modules/systemd.yml
   - from-file: common_modules/script.yml
-  - from-file: common_modules/containerfile.yml
+  #- from-file: common_modules/containerfile.yml
   - from-file: common_modules/initramfs.yml
   - type: signing

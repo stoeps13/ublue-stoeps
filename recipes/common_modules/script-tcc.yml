@@ -1,0 +1,5 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+type: script
+scripts:
+  - tuxedo-driver-build.sh

@@ -18,7 +18,10 @@ install:
     - espanso-wayland
     - fastfetch
     - firewall-config
+    - gcc
     - guestfs-tools
+    - kernel-devel
+    - kmodtool
     - libvirt
     - libvirt-client-qemu
     - libvirt-daemon
@@ -47,6 +50,7 @@ install:
     - libvirt-nss
     - libvirt-ssh-proxy
     - lm_sensors
+    - make
     - mkisofs
     - nmap-ncat
     - nss-tools
@@ -64,6 +68,8 @@ install:
     - qemu-user
     - rclone
     - realtime-setup
+    - rpm-build
+    - rpmdevtools
     - setools-console
     - setroubleshoot-plugins
     - setroubleshoot-server
@@ -80,6 +86,7 @@ install:
     - wireguard-tools
     - wl-clipboard
     - zsh
+
 # group-install:
 #   with-optional: true
 #   packages:

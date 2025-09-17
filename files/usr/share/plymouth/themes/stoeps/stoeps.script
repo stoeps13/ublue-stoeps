@@ -16,7 +16,9 @@ bullet.image = Image.Text("*", 1, 1, 1);
 state.status = "play";
 state.time = 0.0;
 
+// Center horizontal
 pos_x = Window.GetWidth()/2 - image.GetWidth()/2;
+// Put at the bottom of the screen
 pos_y = Window.GetHeight() - image.GetHeight() - 30;
 
 sprite = Sprite(image);

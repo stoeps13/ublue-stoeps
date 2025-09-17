@@ -1,0 +1,10 @@
+[Unit]
+Description=Run tuxedo script once at startup
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/fixtuxedo
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
