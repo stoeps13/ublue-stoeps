@@ -53,6 +53,7 @@ install:
     - pass
     - pipewire
     - playerctl
+    - plymouth-plugin-script
     - podman
     - podman-compose
     - podman-docker

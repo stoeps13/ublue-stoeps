@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Stoeps Logo Theme
+Description=Basic stoeps theme
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/stoeps
+ScriptFile=/usr/share/plymouth/themes/stoeps/stoeps.script
