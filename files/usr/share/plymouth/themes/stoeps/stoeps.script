@@ -26,7 +26,7 @@ sprite.SetX(pos_x);
 sprite.SetY(pos_y);
 
 fun refresh_callback () {
-  sprite.SetOpacity(1);
+  sprite.SetOpacity(0.5);
   spr.SetZ(15);
 }
 
