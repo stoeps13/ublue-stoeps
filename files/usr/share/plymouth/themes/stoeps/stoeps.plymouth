@@ -1,22 +1,11 @@
 [Plymouth Theme]
 Name=Stoeps Logo Theme
 Description=Basic stoeps theme
-ModuleName=details
+ModuleName=script
 
-[details]
-ImageDir=/usr/share/plymouth/themes/stoeps
-DialogHorizontalAlignment=.5
-DialogVerticalAlignment=.7
-TitleHorizontalAlignment=.5
-TitleVerticalAlignment=.382
-HorizontalAlignment=.5
-VerticalAlignment=.7
-WatermarkHorizontalAlignment=.5
-WatermarkVerticalAlignment=.96
-Transition=none
-TransitionDuration=0.0
-BackgroundStartColor=0x2e3436
-BackgroundEndColor=0x2e3436
-BackgroundDirection=vertical
-TextColor=0xffffff
-TitleColor=0xffffff
+[script]
+ImageDir=/usr/share/plymouth/themes/stoeps/
+ScriptFile=/usr/share/plymouth/themes/stoeps/stoeps.script
+
+[script-env-vars]
+example_env_var=example env var value
