@@ -18,13 +18,13 @@ fun refresh_callback ()
         opacity += min_opacity;
         opacity = 1;
         logo.sprite.SetX (Window.GetWidth()  / 2 - logo.image.GetWidth()  / 2);
-        logo.sprite.SetY (Window.GetY() + Window.GetHeight() / 2 - logo.image.GetHeight() / 2);
+        logo.sprite.SetY (Window.GetHeight() - logo.image.GetHeight() - 30);
         logo.sprite.SetOpacity (opacity);
       }
     else
       {
         logo.sprite.SetX (Window.GetWidth()  / 2 - logo.image.GetWidth()  / 2);
-        logo.sprite.SetY (100);
+        logo.sprite.SetY (Window.GetHeight() - logo.image.GetHeight() - 30);
         logo.sprite.SetOpacity (1);
       }
   }
@@ -49,7 +49,7 @@ fun dialog_setup()
     
     box.sprite = Sprite(box.image);
     box.x = Window.GetX() + Window.GetWidth() / 2 - box.image.GetWidth ()/2;
-    box.y = Window.GetY() + Window.GetHeight() / 2 - box.image.GetHeight()/2 + 200;
+    box.y = Window.GetHeight() / 2 - box.image.GetHeight()/2;
     box.z = 10000;
     box.sprite.SetPosition(box.x, box.y, box.z);
     
