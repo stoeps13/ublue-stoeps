@@ -8,6 +8,7 @@ repos:
 install:
   packages:
     - dconf
+    - fedora-release-ostree-desktop
     - git
     - ghostty
     - glib2-devel
@@ -27,6 +28,7 @@ install:
     - libratbag-ratbagd
     - nautilus-gsconnect
     - openssh-askpass
+    - polkit
     - simple-scan
     - zenity
 remove:
