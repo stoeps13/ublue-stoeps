@@ -48,7 +48,7 @@ fun dialog_setup()
     message.image = Image.Text("Enter your decryption passphrase.", 1, 1, 1);
     
     box.sprite = Sprite(box.image);
-    box.x = Window.GetX() + Window.GetWidth() / 2 - box.image.GetWidth ()/2;
+    box.x = Window.GetWidth() / 2 - box.image.GetWidth ()/2;
     box.y = Window.GetHeight() / 2 - box.image.GetHeight()/2;
     box.z = 10000;
     box.sprite.SetPosition(box.x, box.y, box.z);
