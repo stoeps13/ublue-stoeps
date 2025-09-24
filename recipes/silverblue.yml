@@ -1,12 +1,11 @@
 ---
 # image will be published to ghcr.io/<user>/<name>
-name: ublue-stoeps-bluefin-rs
+name: stoeps-silverblue
 # description will be included in the image's metadata
 description: My ublue image for my personal and working devices
 
 # base-image: ghcr.io/ublue-os/silverblue-main
-# base-image: ghcr.io/stoeps13/tuxedo-bluefin-dx
-base-image: ghcr.io/ublue-os/bluefin-dx
+base-image: ghcr.io/ublue-os/silverblue-main
 # base-image: ghcr.io/brickman240/tuxedo-bluefin-dx
 image-version: latest
 
@@ -23,7 +22,6 @@ modules:
   - from-file: common_modules/dnf-gnome.yml
   - from-file: common_modules/systemd.yml
   - from-file: common_modules/script.yml
-  - from-file: common_modules/script-tcc.yml
   #- from-file: common_modules/containerfile.yml
   - from-file: common_modules/initramfs.yml
   - type: signing

@@ -17,4 +17,8 @@ for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
   rm -f /etc/yum.repos.de/${i}
 done
 
+# Set bootscreen
+echo 'Set Plymouth default theme'
+plymouth-set-default-theme stoeps
+
 # rm -rf /tmp/* /var/*

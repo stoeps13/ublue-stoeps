@@ -2,6 +2,4 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 type: script
 scripts:
-  - workarounds.sh
-  #- espanso.sh
-  #- build-tuxedo.sh
+  - tuxedo-driver-build.sh

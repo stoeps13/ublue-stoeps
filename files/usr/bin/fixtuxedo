@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check if the symlink already exists
+if [ ! -L "/opt/tuxedo-control-center" ]; then
+    # Create the symlink
+    sudo ln -s /usr/share/tuxedo-control-center /opt/tuxedo-control-center
+    echo "Tuxedo Control Center linked to /opt directory"
+else
+    echo "Tuxedo symlink at /opt already exists, no fix needed"
+fi

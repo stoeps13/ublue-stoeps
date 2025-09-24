@@ -1,5 +1,5 @@
 ---
-# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 type: dnf
 repos:
   cleanup: true
@@ -8,25 +8,95 @@ repos:
   copr:
     enable:
       - scottames/ghostty
+      - eclipseo/espanso
 
 install:
+  skip-unavailable: true
   packages:
+    - bazaar
+    - distrobox
+    - espanso-wayland
+    - fastfetch
     - firewall-config
+    - gcc
     - guestfs-tools
+    - kernel-devel
+    - kmodtool
+    - libvirt
+    - libvirt-client-qemu
     - libvirt-daemon
     - libvirt-daemon-config-network
+    - libvirt-daemon-config-nwfilter
+    - libvirt-daemon-driver-ch
     - libvirt-daemon-driver-interface
+    - libvirt-daemon-driver-libxl
+    - libvirt-daemon-driver-lxc
     - libvirt-daemon-driver-network
+    - libvirt-daemon-driver-nodedev
     - libvirt-daemon-driver-nwfilter
     - libvirt-daemon-driver-qemu
     - libvirt-daemon-driver-secret
+    - libvirt-daemon-driver-storage
     - libvirt-daemon-driver-storage-core
+    - libvirt-daemon-driver-storage-disk
+    - libvirt-daemon-driver-storage-logical
+    - libvirt-daemon-driver-storage-mpath
+    - libvirt-daemon-driver-storage-rbd
+    - libvirt-daemon-driver-storage-zfs
+    - libvirt-daemon-driver-vbox
+    - libvirt-daemon-kvm
+    - libvirt-dbus
+    - libvirt-glib
+    - libvirt-nss
+    - libvirt-ssh-proxy
     - lm_sensors
+    - make
+    - mkisofs
+    - nmap-ncat
+    - nss-tools
     - pass
     - pipewire
     - playerctl
+    - plymouth-plugin-script
+    - podman
+    - podman-compose
+    - podman-docker
+    - powertop
+    - qemu
     - qemu-kvm
+    - qemu-tools
+    - qemu-user
+    - rclone
     - realtime-setup
+    - rpm-build
+    - rpmdevtools
+    - setools-console
+    - setroubleshoot-plugins
+    - setroubleshoot-server
+    - spice-glib
+    - spice-gtk3
+    - tailscale
     - tcpdump
+    - ublue-fastfetch
+    - ublue-os-libvirt-workarounds
+    - v4l2loopback
+    - virt-install
+    - virt-manager
+    - virt-viewer
     - wireguard-tools
     - wl-clipboard
+    - zsh
+
+# group-install:
+#   with-optional: true
+#   packages:
+#     - development-tools
+remove:
+  packages:
+    - toolbox
+    - docker-ce
+    - docker-ce-cli
+    - docker-ce
+    - docker-ce-rootless-extras
+    - docker-compose-plugin
+    - docker-buildx-plugin
