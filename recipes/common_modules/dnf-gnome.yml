@@ -34,3 +34,4 @@ install:
 remove:
   packages:
     - gnome-initial-setup
+    - gnome-software
