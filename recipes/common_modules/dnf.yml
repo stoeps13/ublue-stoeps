@@ -14,12 +14,15 @@ install:
   skip-unavailable: true
   packages:
     - bazaar
+    - crash
     - distrobox
+    - edac-utils
     - espanso-wayland
     - fastfetch
     - firewall-config
     - gcc
     - guestfs-tools
+    - kernel-debuginfo
     - kernel-devel
     - kmodtool
     - libvirt
@@ -66,6 +69,7 @@ install:
     - qemu-kvm
     - qemu-tools
     - qemu-user
+    - rasdaemon
     - rclone
     - realtime-setup
     - rpm-build
