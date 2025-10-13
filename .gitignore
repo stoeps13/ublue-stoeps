@@ -3,3 +3,4 @@ cosign.key
 Containerfile
 /Containerfile
 /Containerfile.*
+/.bluebuild-scripts_*
