@@ -9,6 +9,7 @@ repos:
     enable:
       - scottames/ghostty
       - eclipseo/espanso
+      - ublue-os/packages
 
 install:
   skip-unavailable: true
@@ -22,8 +23,7 @@ install:
     - firewall-config
     - gcc
     - guestfs-tools
-    - kernel-debuginfo
-    - kernel-devel
+    # - kernel-devel
     - kmodtool
     - libvirt
     - libvirt-client-qemu
@@ -83,6 +83,7 @@ install:
     - tcpdump
     - ublue-fastfetch
     - ublue-os-libvirt-workarounds
+    - uupd
     - v4l2loopback
     - virt-install
     - virt-manager

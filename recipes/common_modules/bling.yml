@@ -2,9 +2,8 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 type: bling
 install:
-  - ublue-update
   - dconf-update-service
   # - laptop # installs TLP and configures your system for laptop usage
   # - 1password # install 1Password (stable) and `op` CLI tool
-  # - gnome-vrr # enables gnome-vrr for your image
+  - gnome-vrr # enables gnome-vrr for your image
   # - flatpaksync # allows synchronization of user-installed flatpaks

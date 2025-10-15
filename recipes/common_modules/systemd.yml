@@ -9,3 +9,4 @@ system:
   enabled:
     - update-system-flatpaks.timer
     - ublue-update.timer
+    - uupd.service
