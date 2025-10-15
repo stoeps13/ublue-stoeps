@@ -4,7 +4,6 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
-
 ### Install packages
 
 #Exec perms for symlink script
@@ -12,7 +11,10 @@ chmod +x /usr/bin/fixtuxedo
 #And autorun
 systemctl enable /etc/systemd/system/fixtuxedo.service
 
-rpm-ostree install "kernel-devel-$(uname -r)"
+KERNEL="$(rpm -q kernel --queryformat '%{VERSION}')"
+echo "Kernel: ${KERNEL}"
+
+rpm-ostree install "kernel-devel-$KERNEL"
 
 export HOME=/tmp
 
@@ -28,8 +30,7 @@ cd ..
 
 # Extract the Version value from the spec file
 export TD_VERSION=$(cat tuxedo-drivers-kmod/tuxedo-drivers-kmod-common.spec | grep -E '^Version:' | awk '{print $2}')
-
-KERNEL_VERSION="$(rpm -q kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
+export KERNEL_VERSION="$(rpm -q kernel --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
 echo "Kernel version: ${KERNEL_VERSION}"
 echo "Tuxedo version: ${TD_VERSION}"
