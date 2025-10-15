@@ -25,33 +25,8 @@ install:
     - guestfs-tools
     - htop
     - kmodtool
-    - libvirt
-    - libvirt-client-qemu
-    - libvirt-daemon
     - libvirt-daemon-config-network
-    - libvirt-daemon-config-nwfilter
-    - libvirt-daemon-driver-ch
-    - libvirt-daemon-driver-interface
-    - libvirt-daemon-driver-libxl
-    - libvirt-daemon-driver-lxc
-    - libvirt-daemon-driver-network
-    - libvirt-daemon-driver-nodedev
-    - libvirt-daemon-driver-nwfilter
-    - libvirt-daemon-driver-qemu
-    - libvirt-daemon-driver-secret
-    - libvirt-daemon-driver-storage
-    - libvirt-daemon-driver-storage-core
-    - libvirt-daemon-driver-storage-disk
-    - libvirt-daemon-driver-storage-logical
-    - libvirt-daemon-driver-storage-mpath
-    - libvirt-daemon-driver-storage-rbd
-    - libvirt-daemon-driver-storage-zfs
-    - libvirt-daemon-driver-vbox
     - libvirt-daemon-kvm
-    - libvirt-dbus
-    - libvirt-glib
-    - libvirt-nss
-    - libvirt-ssh-proxy
     - lm_sensors
     - make
     - mkisofs
@@ -66,6 +41,7 @@ install:
     - podman-docker
     - powertop
     - qemu
+    - qemu-kvm
     - qemu-kvm
     - qemu-tools
     - qemu-user
@@ -87,6 +63,7 @@ install:
     - v4l2loopback
     - virt-install
     - virt-manager
+    - virt-top
     - virt-viewer
     - wireguard-tools
     - wl-clipboard
