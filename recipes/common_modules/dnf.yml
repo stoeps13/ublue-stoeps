@@ -61,6 +61,7 @@ install:
     - ublue-os-libvirt-workarounds
     - uupd
     - v4l2loopback
+    - vim-enhanced
     - virt-install
     - virt-manager
     - virt-top
