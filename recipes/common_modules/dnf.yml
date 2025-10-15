@@ -23,7 +23,7 @@ install:
     - firewall-config
     - gcc
     - guestfs-tools
-    # - kernel-devel
+    - htop
     - kmodtool
     - libvirt
     - libvirt-client-qemu
