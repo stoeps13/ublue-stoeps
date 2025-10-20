@@ -39,6 +39,8 @@ install:
     - podman-compose
     - podman-docker
     - powertop
+    - python3-libvirt
+    - python3-lxml
     - qemu
     - qemu-kvm
     - qemu-kvm
