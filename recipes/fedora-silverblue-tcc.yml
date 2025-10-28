@@ -13,7 +13,7 @@ image-version: 42
 modules:
   - from-file: common_modules/files.yml
   - from-file: common_modules/files-tcc.yml
-  - from-file: common_modules/akmods.yml
+  #- from-file: common_modules/akmods.yml
   - from-file: common_modules/chezmoi.yml
   - from-file: common_modules/default-flatpaks.yml
   - from-file: common_modules/fonts.yml
