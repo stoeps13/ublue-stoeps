@@ -1,5 +1,5 @@
 ---
-name: build ublue-stoeps
+name: Build Bootc Image
 on:
   schedule:
     - cron: "30 18 * * 0,3"
@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   bluebuild:
-    name: Build ublue-stoeps image
+    name: Build bootc-stoeps image
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -21,13 +21,12 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          #- bluefin-tcc.yml
-          #- bluefin-dx.yml
-          - silverblue-tcc.yml
-          - silverblue.yml
+          - ublue-silverblue.yml
+          - ublue-silverblue-tuxedo.yml
           - fedora-sway.yml
+          - fedora-sway-tuxedo.yml
           - fedora-silverblue.yml
-          - fedora-silverblue-tcc.yml
+          - fedora-silverblue-tuxedo.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
