@@ -63,6 +63,7 @@ install:
     - ublue-os-libvirt-workarounds
     - uupd
     - v4l2loopback
+    - vdirsyncer
     - vim-enhanced
     - virt-install
     - virt-manager
