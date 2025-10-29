@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: stoeps-sway
+name: stoeps-sway-tuxedo
 # description will be included in the image's metadata
 description: Bootc image based on Fedora Sway
 

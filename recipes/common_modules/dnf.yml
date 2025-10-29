@@ -59,6 +59,7 @@ install:
     - spice-gtk3
     - tailscale
     - tcpdump
+    - tmux
     - ublue-fastfetch
     - ublue-os-libvirt-workarounds
     - uupd
