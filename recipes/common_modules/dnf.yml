@@ -19,6 +19,7 @@ install:
     - edac-utils
     - espanso-wayland
     - fastfetch
+    - fd-find
     - firewall-config
     - gcc
     - guestfs-tools
