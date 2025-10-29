@@ -7,7 +7,7 @@ description: My ublue image for my personal and working devices (based on ublue 
 # base-image: ghcr.io/ublue-os/silverblue-main
 base-image: ghcr.io/ublue-os/silverblue-main
 # base-image: ghcr.io/brickman240/tuxedo-bluefin-dx
-image-version: 43
+image-version: 42
 
 modules:
   - from-file: common_modules/files.yml

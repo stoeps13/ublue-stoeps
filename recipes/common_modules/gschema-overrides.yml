@@ -6,3 +6,4 @@ include:
   - compose-key.gschema.override
   - recent-files.gschema.override
   - workspace.gschema.override
+  # - disable-extension.gschema.override
