@@ -2,13 +2,13 @@
 # image will be published to ghcr.io/<user>/<name>
 name: stoeps-fedora-silverblue-tuxedo
 # description will be included in the image's metadata
-description: Bootc image for tuxedo device based on Fedora Silverblue 42
+description: Bootc image for tuxedo device based on Fedora Silverblue 43
 
 # base-image: ghcr.io/ublue-os/silverblue-main
 # base-image: ghcr.io/stoeps13/tuxedo-silverblue
 base-image: quay.io/fedora/fedora-silverblue
 # base-image: ghcr.io/brickman240/tuxedo-bluefin-dx
-image-version: 42
+image-version: 43
 
 modules:
   - from-file: common_modules/files.yml
