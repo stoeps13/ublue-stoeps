@@ -17,8 +17,9 @@ modules:
   - from-file: common_modules/default-flatpaks.yml
   - from-file: common_modules/fonts.yml
   - from-file: common_modules/dnf.yml
+  - from-file: common_modules/dnf-tuxedo.yml
   - from-file: common_modules/systemd.yml
   - from-file: common_modules/script-sway.yml
-  - from-file: common_modules/script-tcc.yml
+  # - from-file: common_modules/script-tcc.yml
   - from-file: common_modules/initramfs.yml
   - type: signing

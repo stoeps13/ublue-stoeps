@@ -1,0 +1,14 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+type: dnf
+optfix:
+  - tuxedo-control-center
+repos:
+  copr:
+    - stoeps/tuxedo-akmods
+install:
+  packages:
+    - tuxedo-drivers-kmod
+    - tuxedo-control-center
+remove:
+  packages: []

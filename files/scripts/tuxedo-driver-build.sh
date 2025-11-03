@@ -14,7 +14,9 @@ systemctl enable /etc/systemd/system/fixtuxedo.service
 KERNEL="$(rpm -q kernel --queryformat '%{VERSION}')"
 echo "Kernel: ${KERNEL}"
 
-rpm-ostree install "kernel-devel-$KERNEL"
+sed -i 's/gpgcheck=1/gpgcheck=0/' /etc/yum.repos.d/*.repo
+# rpm-ostree install "kernel-devel-$KERNEL"
+dnf install -y "kernel-devel-$KERNEL"
 
 export HOME=/tmp
 
@@ -25,11 +27,8 @@ rpmdev-setuptree
 git clone https://github.com/stoeps13/tuxedo-drivers-kmod
 
 cd tuxedo-drivers-kmod/
-git checkout f43
 ./build.sh
 cd ..
-
-sed -i 's/gpgcheck=1/gpgcheck=0/' /etc/repos.d/*.repo
 
 # Extract the Version value from the spec file
 export TD_VERSION=$(cat tuxedo-drivers-kmod/tuxedo-drivers-kmod-common.spec | grep -E '^Version:' | awk '{print $2}')
@@ -38,7 +37,9 @@ export KERNEL_VERSION="$(rpm -q kernel --queryformat '%{VERSION}-%{RELEASE}.%{AR
 echo "Kernel version: ${KERNEL_VERSION}"
 echo "Tuxedo version: ${TD_VERSION}"
 
-rpm-ostree install ~/rpmbuild/RPMS/x86_64/akmod-tuxedo-drivers-$TD_VERSION-1.fc43.x86_64.rpm ~/rpmbuild/RPMS/x86_64/tuxedo-drivers-kmod-$TD_VERSION-1.fc43.x86_64.rpm ~/rpmbuild/RPMS/x86_64/tuxedo-drivers-kmod-common-$TD_VERSION-1.fc42.x86_64.rpm ~/rpmbuild/RPMS/x86_64/kmod-tuxedo-drivers-$TD_VERSION-1.fc42.x86_64.rpm
+# chmod 777 -R ~/rpmbuild
+# sudo -u akmods dnf install -y ~/rpmbuild/RPMS/x86_64/akmod-tuxedo-drivers-$TD_VERSION-1.fc43.x86_64.rpm ~/rpmbuild/RPMS/x86_64/tuxedo-drivers-kmod-$TD_VERSION-1.fc43.x86_64.rpm ~/rpmbuild/RPMS/x86_64/tuxedo-drivers-kmod-common-$TD_VERSION-1.fc43.x86_64.rpm ~/rpmbuild/RPMS/x86_64/kmod-tuxedo-drivers-$TD_VERSION-1.fc43.x86_64.rpm
+rpm-ostree install ~/rpmbuild/RPMS/x86_64/akmod-tuxedo-drivers-$TD_VERSION-1.fc43.x86_64.rpm ~/rpmbuild/RPMS/x86_64/tuxedo-drivers-kmod-$TD_VERSION-1.fc43.x86_64.rpm ~/rpmbuild/RPMS/x86_64/tuxedo-drivers-kmod-common-$TD_VERSION-1.fc43.x86_64.rpm ~/rpmbuild/RPMS/x86_64/kmod-tuxedo-drivers-$TD_VERSION-1.fc43.x86_64.rpm
 
 akmods --force --kernels "${KERNEL_VERSION}" --kmod "tuxedo-drivers-kmod"
 
@@ -47,7 +48,7 @@ mkdir -p /usr/share
 rm /opt
 ln -s /usr/share /opt
 
-rpm-ostree install tuxedo-control-center
+dnf install -y tuxedo-control-center
 
 cd /
 rm /opt
