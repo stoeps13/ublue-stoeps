@@ -1,0 +1,9 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+type: dnf
+repos:
+  copr:
+    - aeiro/nwg-shell
+install:
+  packages:
+    - nwg-displays
