@@ -1,5 +1,5 @@
 ---
-name: Build UBlue Image
+name: Build Bluefin Image
 on:
   schedule:
     - cron: "30 20 * * 0"
