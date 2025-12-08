@@ -14,7 +14,7 @@ repos:
 install:
   skip-unavailable: true
   packages:
-    - https://github.com/displaylink-rpm/displaylink-rpm/releases/download/v6.1.1-2/fedora-42-displaylink-1.14.11-1.github_evdi.x86_64.rpm 
+    - https://github.com/displaylink-rpm/displaylink-rpm/releases/download/v6.1.1-2/fedora-42-displaylink-1.14.11-1.github_evdi.x86_64.rpm
     - crash
     - distrobox
     - edac-utils
@@ -23,6 +23,7 @@ install:
     - fd-find
     - firewall-config
     - gcc
+    - ghostty
     - guestfs-tools
     - htop
     - kmodtool
