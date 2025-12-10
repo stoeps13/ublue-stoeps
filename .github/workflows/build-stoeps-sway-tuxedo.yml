@@ -1,8 +1,8 @@
 ---
-name: Build Sway Images
+name: Build Sway Tuxedo Images
 on:
   schedule:
-    - cron: "30 19 * * 0,3"
+    - cron: "0 20 * * 0,3"
   pull_request:
   workflow_dispatch:
 concurrency:
@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - fedora-sway.yml
+          - fedora-sway-tuxedo.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
