@@ -3,10 +3,10 @@
 Window.SetBackgroundTopColor(0.0, 0.0, 0.0);
 Window.SetBackgroundBottomColor(0.0, 0.0, 0.0);
 
-# Assuming you have 2 monitors side-by-side. Adjust monitor_width and num_monitors as needed.
-num_monitors = 2;
+# Single monitor setup
+num_monitors = 1;
 total_width = Window.GetWidth();
-monitor_width = total_width / num_monitors;
+monitor_width = total_width;
 monitor_height = Window.GetHeight();
 
 logo_sprites = [];
