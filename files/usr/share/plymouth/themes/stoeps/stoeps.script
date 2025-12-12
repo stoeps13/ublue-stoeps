@@ -1,35 +1,66 @@
-# This is an example plymouth plugin script
+# Multi-monitor Plymouth plugin script
 
 Window.SetBackgroundTopColor(0.0, 0.0, 0.0);
 Window.SetBackgroundBottomColor(0.0, 0.0, 0.0);
 
-logo.image = Image("watermark.png");
-logo.sprite = Sprite(logo.image);
-logo.opacity_angle = 0;
+# Assuming you have 2 monitors side-by-side. Adjust monitor_width and num_monitors as needed.
+num_monitors = 2;
+total_width = Window.GetWidth();
+monitor_width = total_width / num_monitors;
+monitor_height = Window.GetHeight();
+
+logo_sprites = [];
+
+fun setup_logos()
+  {
+    logo_image = Image("watermark.png");
+    
+    for (i = 0; i < num_monitors; i++)
+      {
+        logo_sprites[i].image = logo_image;
+        logo_sprites[i].sprite = Sprite(logo_image);
+        logo_sprites[i].opacity_angle = 0;
+        logo_sprites[i].monitor_index = i;
+      }
+  }
 
 fun refresh_callback ()
   {
     if (status == "normal")
       {
-        logo.opacity_angle += ((2 * 3.14) / 50) * 0.5;  # 0.5 HZ
-        min_opacity = 0.3;
-        opacity = (Math.Cos(logo.opacity_angle) + 1) / 2;
-        opacity *= 1 - min_opacity;
-        opacity += min_opacity;
-        opacity = 1;
-        logo.sprite.SetX (Window.GetWidth()  / 2 - logo.image.GetWidth()  / 2);
-        logo.sprite.SetY (Window.GetHeight() - logo.image.GetHeight() - 30);
-        logo.sprite.SetOpacity (opacity);
+        for (i = 0; i < num_monitors; i++)
+          {
+            logo_sprites[i].opacity_angle += ((2 * 3.14) / 50) * 0.5;
+            min_opacity = 0.3;
+            opacity = (Math.Cos(logo_sprites[i].opacity_angle) + 1) / 2;
+            opacity *= 1 - min_opacity;
+            opacity += min_opacity;
+            
+            monitor_x = i * monitor_width;
+            center_x = monitor_x + monitor_width / 2 - logo_sprites[i].image.GetWidth() / 2;
+            center_y = monitor_height - logo_sprites[i].image.GetHeight() - 30;
+            
+            logo_sprites[i].sprite.SetX(center_x);
+            logo_sprites[i].sprite.SetY(center_y);
+            logo_sprites[i].sprite.SetOpacity(opacity);
+          }
       }
     else
       {
-        logo.sprite.SetX (Window.GetWidth()  / 2 - logo.image.GetWidth()  / 2);
-        logo.sprite.SetY (Window.GetHeight() - logo.image.GetHeight() - 30);
-        logo.sprite.SetOpacity (1);
+        for (i = 0; i < num_monitors; i++)
+          {
+            monitor_x = i * monitor_width;
+            center_x = monitor_x + monitor_width / 2 - logo_sprites[i].image.GetWidth() / 2;
+            center_y = monitor_height - logo_sprites[i].image.GetHeight() - 30;
+            
+            logo_sprites[i].sprite.SetX(center_x);
+            logo_sprites[i].sprite.SetY(center_y);
+            logo_sprites[i].sprite.SetOpacity(1);
+          }
       }
   }
-  
-Plymouth.SetRefreshFunction (refresh_callback);
+
+Plymouth.SetRefreshFunction(refresh_callback);
 
 #----------------------------------------- Dialogue --------------------------------
 
@@ -42,52 +73,66 @@ fun dialog_setup()
     local.entry;
     local.message;
     
-    box.image = Image("box.png");
-    lock.image = Image("lock.png");
-    entry.image = Image("entry.png");
-    message.image = Image.Text("Enter your decryption passphrase.", 1, 1, 1);
+    dialog.dialogs = [];
     
-    box.sprite = Sprite(box.image);
-    box.x = Window.GetWidth() / 2 - box.image.GetWidth ()/2;
-    box.y = Window.GetHeight() / 2 - box.image.GetHeight()/2;
-    box.z = 10000;
-    box.sprite.SetPosition(box.x, box.y, box.z);
+    box_image = Image("box.png");
+    lock_image = Image("lock.png");
+    entry_image = Image("entry.png");
+    message_image = Image.Text("Enter your decryption passphrase.", 1, 1, 1);
+    bullet_image = Image("bullet.png");
     
-    lock.sprite = Sprite(lock.image);
-    lock.x = box.x + 50;
-    lock.y = box.y + box.image.GetHeight()/2 - lock.image.GetHeight()/2;
-    lock.z = box.z + 1;
-    lock.sprite.SetPosition(lock.x, lock.y, lock.z);
+    for (monitor = 0; monitor < num_monitors; monitor++)
+      {
+        dialog.dialogs[monitor].box.image = box_image;
+        dialog.dialogs[monitor].lock.image = lock_image;
+        dialog.dialogs[monitor].entry.image = entry_image;
+        dialog.dialogs[monitor].message.image = message_image;
+        dialog.dialogs[monitor].bullet_image = bullet_image;
+        
+        monitor_x = monitor * monitor_width;
+        
+        dialog.dialogs[monitor].box.sprite = Sprite(box_image);
+        dialog.dialogs[monitor].box.x = monitor_x + monitor_width / 2 - box_image.GetWidth() / 2;
+        dialog.dialogs[monitor].box.y = monitor_height / 2 - box_image.GetHeight() / 2;
+        dialog.dialogs[monitor].box.z = 10000;
+        dialog.dialogs[monitor].box.sprite.SetPosition(dialog.dialogs[monitor].box.x, dialog.dialogs[monitor].box.y, dialog.dialogs[monitor].box.z);
+        
+        dialog.dialogs[monitor].lock.sprite = Sprite(lock_image);
+        dialog.dialogs[monitor].lock.x = dialog.dialogs[monitor].box.x + 50;
+        dialog.dialogs[monitor].lock.y = dialog.dialogs[monitor].box.y + box_image.GetHeight() / 2 - lock_image.GetHeight() / 2;
+        dialog.dialogs[monitor].lock.z = dialog.dialogs[monitor].box.z + 1;
+        dialog.dialogs[monitor].lock.sprite.SetPosition(dialog.dialogs[monitor].lock.x, dialog.dialogs[monitor].lock.y, dialog.dialogs[monitor].lock.z);
+        
+        dialog.dialogs[monitor].entry.sprite = Sprite(entry_image);
+        dialog.dialogs[monitor].entry.x = dialog.dialogs[monitor].lock.x + lock_image.GetWidth() + 40;
+        dialog.dialogs[monitor].entry.y = dialog.dialogs[monitor].box.y + box_image.GetHeight() / 2 - entry_image.GetHeight() / 2;
+        dialog.dialogs[monitor].entry.z = dialog.dialogs[monitor].box.z + 1;
+        dialog.dialogs[monitor].entry.sprite.SetPosition(dialog.dialogs[monitor].entry.x, dialog.dialogs[monitor].entry.y, dialog.dialogs[monitor].entry.z);
+        
+        dialog.dialogs[monitor].message.sprite = Sprite(message_image);
+        dialog.dialogs[monitor].message.x = monitor_x + monitor_width / 2 - message_image.GetWidth() / 2;
+        dialog.dialogs[monitor].message.y = dialog.dialogs[monitor].box.y + box_image.GetHeight() + 20;
+        dialog.dialogs[monitor].message.z = dialog.dialogs[monitor].box.z + 1;
+        dialog.dialogs[monitor].message.sprite.SetPosition(dialog.dialogs[monitor].message.x, dialog.dialogs[monitor].message.y, dialog.dialogs[monitor].message.z);
+        
+        dialog.dialogs[monitor].bullet = [];
+      }
     
-    entry.sprite = Sprite(entry.image);
-    entry.x = lock.x + lock.image.GetWidth() + 40;
-    entry.y = box.y + box.image.GetHeight()/2 - entry.image.GetHeight()/2;
-    entry.z = box.z + 1;
-    entry.sprite.SetPosition(entry.x, entry.y, entry.z);
-
-    message.sprite = Sprite(message.image);
-    message.x = Window.GetWidth() / 2 - message.image.GetWidth() / 2;
-    message.y = box.y + box.image.GetHeight() + 20;
-    message.z = box.z + 1;
-    message.sprite.SetPosition(message.x, message.y, message.z);
-    
-    global.dialog.box = box;
-    global.dialog.lock = lock;
-    global.dialog.entry = entry;
-    global.dialog.message = message;
-    global.dialog.bullet_image = Image("bullet.png");
-    dialog_opacity (1);
+    global.dialog = dialog;
   }
-    
+
 fun dialog_opacity(opacity)
   {
-    dialog.box.sprite.SetOpacity (opacity);
-    dialog.lock.sprite.SetOpacity (opacity);
-    dialog.entry.sprite.SetOpacity (opacity);
-    dialog.message.sprite.SetOpacity (opacity);
-    for (index = 0; dialog.bullet[index]; index++)
+    for (monitor = 0; monitor < num_monitors; monitor++)
       {
-        dialog.bullet[index].sprite.SetOpacity(opacity);
+        dialog.dialogs[monitor].box.sprite.SetOpacity(opacity);
+        dialog.dialogs[monitor].lock.sprite.SetOpacity(opacity);
+        dialog.dialogs[monitor].entry.sprite.SetOpacity(opacity);
+        dialog.dialogs[monitor].message.sprite.SetOpacity(opacity);
+        for (index = 0; dialog.dialogs[monitor].bullet[index]; index++)
+          {
+            dialog.dialogs[monitor].bullet[index].sprite.SetOpacity(opacity);
+          }
       }
   }
 
@@ -95,87 +140,80 @@ fun display_normal_callback ()
   {
     global.status = "normal";
     if (global.dialog)
-      dialog_opacity (0);
+      dialog_opacity(0);
   }
 
 fun display_password_callback (prompt, bullets)
   {
     global.status = "password";
     if (!global.dialog)
-	dialog_setup();
+      dialog_setup();
     else
-	dialog_opacity(1);
-
-    for (index = 0; dialog.bullet[index] || index < bullets; index++)
+      dialog_opacity(1);
+    
+    for (monitor = 0; monitor < num_monitors; monitor++)
       {
-        dialog.bullet[index].sprite = Sprite(dialog.bullet_image);
-        dialog.bullet[index].x = dialog.entry.x + (dialog.entry.image.GetWidth() / 2) - (bullets * (dialog.bullet_image.GetWidth() + 1)) / 2 + index * (dialog.bullet_image.GetWidth() + 1);
-        dialog.bullet[index].y = dialog.entry.y + dialog.entry.image.GetHeight() / 2 - dialog.bullet_image.GetHeight() / 2;
-        dialog.bullet[index].z = dialog.entry.z + 1;
-        dialog.bullet[index].sprite.SetPosition(dialog.bullet[index].x, dialog.bullet[index].y, dialog.bullet[index].z);
-        if (index < bullets)
-          dialog.bullet[index].sprite.SetOpacity(1);
-        else
-          dialog.bullet[index].sprite.SetOpacity(0);
+        for (index = 0; dialog.dialogs[monitor].bullet[index] || index < bullets; index++)
+          {
+            dialog.dialogs[monitor].bullet[index].sprite = Sprite(dialog.dialogs[monitor].bullet_image);
+            dialog.dialogs[monitor].bullet[index].x = dialog.dialogs[monitor].entry.x + (dialog.dialogs[monitor].entry.image.GetWidth() / 2) - (bullets * (dialog.dialogs[monitor].bullet_image.GetWidth() + 1)) / 2 + index * (dialog.dialogs[monitor].bullet_image.GetWidth() + 1);
+            dialog.dialogs[monitor].bullet[index].y = dialog.dialogs[monitor].entry.y + dialog.dialogs[monitor].entry.image.GetHeight() / 2 - dialog.dialogs[monitor].bullet_image.GetHeight() / 2;
+            dialog.dialogs[monitor].bullet[index].z = dialog.dialogs[monitor].entry.z + 1;
+            dialog.dialogs[monitor].bullet[index].sprite.SetPosition(dialog.dialogs[monitor].bullet[index].x, dialog.dialogs[monitor].bullet[index].y, dialog.dialogs[monitor].bullet[index].z);
+            if (index < bullets)
+              dialog.dialogs[monitor].bullet[index].sprite.SetOpacity(1);
+            else
+              dialog.dialogs[monitor].bullet[index].sprite.SetOpacity(0);
+          }
       }
   }
 
 Plymouth.SetDisplayNormalFunction(display_normal_callback);
 Plymouth.SetDisplayPasswordFunction(display_password_callback);
 
-#----------------------------------------- Progress Bar --------------------------------
-
-
-# progress_box.image = Image("progress_box.png");
-# progress_box.sprite = Sprite(progress_box.image);
-# 
-# progress_box.x = Window.GetX() + Window.GetWidth() / 2 - progress_box.image.GetWidth() / 2;
-# progress_box.y = Window.GetY() + Window.GetHeight() * 0.75 - progress_box.image.GetHeight() / 2 + 100;
-# progress_box.sprite.SetPosition(progress_box.x, progress_box.y, 0);
-# 
-# progress_bar.original_image = Image("progress_bar.png");
-# progress_bar.sprite = Sprite();
-# 
-# progress_bar.x = Window.GetX() + Window.GetWidth()  / 2 -        progress_bar.original_image.GetWidth() / 2;
-# progress_bar.y = Window.GetY() + Window.GetHeight() / 2 * 1.5  - progress_box.image.GetHeight() / 2 + (progress_box.image.GetHeight() - progress_bar.original_image.GetHeight()) / 2;
-# progress_bar.sprite.SetPosition(progress_bar.x, progress_bar.y, 1);
-# 
-# fun progress_callback (duration, progress)
-#   {
-#     if (progress_bar.image.GetWidth() != Math.Int (progress_bar.original_image.GetWidth () * progress))
-#       {
-#         progress_bar.image = progress_bar.original_image.Scale(progress_bar.original_image.GetWidth(progress_bar.original_image) * progress, progress_bar.original_image.GetHeight());
-#         progress_bar.sprite.SetImage (progress_bar.image);
-#       }
-#   }
-# 
-# Plymouth.SetBootProgressFunction(progress_callback);
-
 #----------------------------------------- Quit --------------------------------
 
 fun quit_callback ()
-{
-  logo.sprite.SetOpacity(1);
-}
+  {
+    for (i = 0; i < num_monitors; i++)
+      {
+        logo_sprites[i].sprite.SetOpacity(1);
+      }
+  }
 
 Plymouth.SetQuitFunction(quit_callback);
 
 #----------------------------------------- Message --------------------------------
 
-message_sprite = Sprite();
-message_sprite.SetPosition(10, 10, 10000);
+message_sprites = [];
+
+fun setup_messages()
+  {
+    for (i = 0; i < num_monitors; i++)
+      {
+        message_sprites[i] = Sprite();
+        monitor_x = i * monitor_width;
+        message_sprites[i].SetPosition(monitor_x + 10, 10, 10000);
+      }
+  }
 
 fun display_message_callback (text)
-{
-  my_image = Image.Text(text, 1, 1, 1);
-  message_sprite.SetImage(my_image);
-}
+  {
+    my_image = Image.Text(text, 1, 1, 1);
+    for (i = 0; i < num_monitors; i++)
+      {
+        message_sprites[i].SetImage(my_image);
+      }
+  }
 
 fun hide_message_callback (text)
-{
-  message_sprite = Sprite();
-  message_sprite.SetPosition(10, 10, 10000);
-}
+  {
+    setup_messages();
+  }
 
-Plymouth.SetDisplayMessageFunction (display_message_callback);
-Plymouth.SetHideMessageFunction (hide_message_callback);
+Plymouth.SetDisplayMessageFunction(display_message_callback);
+Plymouth.SetHideMessageFunction(hide_message_callback);
+
+# Initialize on startup
+setup_logos();
+setup_messages();
