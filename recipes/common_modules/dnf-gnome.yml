@@ -35,3 +35,6 @@ remove:
   packages:
     - gnome-initial-setup
     - gnome-software
+    - mysqld
+    - mysql-common
+    - mysql-selinux
