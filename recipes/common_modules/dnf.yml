@@ -68,6 +68,7 @@ install:
     - v4l2loopback
     - vdirsyncer
     - vim-enhanced
+    - virt-v2v
     - virt-install
     - virt-manager
     - virt-top
