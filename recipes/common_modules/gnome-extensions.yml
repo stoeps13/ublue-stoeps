@@ -8,6 +8,4 @@ install:
   - Logo Menu
   - Tiling Shell
   - Blur my Shell
-  - Tailscale QS
-  - Wiggle
 uninstall: []
