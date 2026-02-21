@@ -11,10 +11,7 @@ repos:
 install:
   skip-unavailable: true
   packages:
-    - https://github.com/displaylink-rpm/displaylink-rpm/releases/download/v6.1.1-2/fedora-42-displaylink-1.14.11-1.github_evdi.x86_64.rpm
-    - code
     - crash
-    - distrobox
     - edac-utils
     - espanso-wayland
     - fastfetch
@@ -23,7 +20,6 @@ install:
     - gcc
     - ghostty
     - guestfs-tools
-    - htop
     - kmodtool
     - libvirt-daemon-config-network
     - libvirt-daemon-kvm
@@ -33,10 +29,8 @@ install:
     - nmap-ncat
     - nss-tools
     - pass
-    - pipewire
     - playerctl
     - plymouth-plugin-script
-    - podman
     - podman-compose
     - podman-docker
     - powertop
@@ -50,27 +44,20 @@ install:
     - rasdaemon
     - rclone
     - realtime-setup
-    - rpm-build
-    - rpmdevtools
     - setools-console
     - setroubleshoot-plugins
     - setroubleshoot-server
     - spice-glib
     - spice-gtk3
     - tailscale
-    - tcpdump
-    - tmux
     - uupd
     - v4l2loopback
     - vdirsyncer
-    - vim-enhanced
     - virt-v2v
     - virt-install
     - virt-manager
     - virt-top
     - virt-viewer
-    - wireguard-tools
-    - wl-clipboard
     - zsh
 
 # group-install:
