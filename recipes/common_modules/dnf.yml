@@ -3,13 +3,10 @@
 type: dnf
 repos:
   cleanup: true
-  keys:
-    - https://rpm.tuxedocomputers.com/fedora/42/0x54840598.pub.asc
   copr:
     enable:
       - scottames/ghostty
       - eclipseo/espanso
-      - ublue-os/packages
 
 install:
   skip-unavailable: true
@@ -63,8 +60,6 @@ install:
     - tailscale
     - tcpdump
     - tmux
-    - ublue-fastfetch
-    - ublue-os-libvirt-workarounds
     - uupd
     - v4l2loopback
     - vdirsyncer
