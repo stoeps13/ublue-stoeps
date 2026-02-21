@@ -23,6 +23,7 @@ jobs:
         recipe:
           - fedora-silverblue.yml
           - fedora-silverblue-tuxedo.yml
+          - ublue-silverblue.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
