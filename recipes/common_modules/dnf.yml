@@ -59,6 +59,9 @@ install:
     - virt-top
     - virt-viewer
     - zsh
+    - binutils
+    - kdump-tools
+    - kernel-headers
 
 # group-install:
 #   with-optional: true

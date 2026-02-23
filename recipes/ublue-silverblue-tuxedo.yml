@@ -1,6 +1,6 @@
 ---
 # image will be published to ghcr.io/<user>/<name>
-name: stoeps-silverblue-tuxedo
+name: stoeps-ublue-silverblue-tuxedo
 # description will be included in the image's metadata
 description: My ublue image for my personal and working devices (based on ublue silverblue)
 
@@ -8,12 +8,12 @@ description: My ublue image for my personal and working devices (based on ublue 
 # base-image: ghcr.io/stoeps13/tuxedo-silverblue
 base-image: ghcr.io/ublue-os/silverblue-main
 # base-image: ghcr.io/brickman240/tuxedo-bluefin-dx
-image-version: 42
+image-version: 43
 
 modules:
   - from-file: common_modules/files.yml
   - from-file: common_modules/files-tcc.yml
-  - from-file: common_modules/akmods.yml
+  # - from-file: common_modules/akmods.yml
   - from-file: common_modules/chezmoi.yml
   - from-file: common_modules/default-flatpaks.yml
   - from-file: common_modules/fonts.yml
