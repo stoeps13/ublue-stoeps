@@ -11,8 +11,12 @@ repos:
 install:
   skip-unavailable: true
   packages:
+    - binutils
     - crash
+    - curl
     - edac-utils
+    - edid-decode
+    - efibootmgr
     - espanso-wayland
     - fastfetch
     - fd-find
@@ -20,14 +24,18 @@ install:
     - gcc
     - ghostty
     - guestfs-tools
+    - kdump-tools
+    - kernel-headers
     - kmodtool
     - libvirt-daemon-config-network
     - libvirt-daemon-kvm
+    - lm_sensors
     - lm_sensors
     - make
     - mkisofs
     - nmap-ncat
     - nss-tools
+    - nvme-cli
     - pass
     - playerctl
     - plymouth-plugin-script
@@ -53,20 +61,18 @@ install:
     - uupd
     - v4l2loopback
     - vdirsyncer
-    - virt-v2v
     - virt-install
     - virt-manager
     - virt-top
+    - virt-v2v
     - virt-viewer
+    - zip
     - zsh
-    - binutils
-    - kdump-tools
-    - kernel-headers
 
-# group-install:
-#   with-optional: true
-#   packages:
-#     - development-tools
+    # group-install:
+    #   with-optional: true
+    #   packages:
+    #     - development-tools
 remove:
   packages:
     - toolbox
