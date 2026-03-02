@@ -3,9 +3,7 @@ install:
   - AppIndicator and KStatusNotifierItem Support
   - Caffeine
   - Control monitor brightness and volume with ddcutil
-  - Dash to Dock
   - Just Perfection
   - Logo Menu
   - Tiling Shell
-  - Blur my Shell
 uninstall: []
