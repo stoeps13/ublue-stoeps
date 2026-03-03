@@ -10,7 +10,7 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 /usr/libexec/gdm-runtime-config set daemon WaylandEnable false
 
 # Downgrade amdgpu packages
-sudo dnf downgrade amd-gpu-firmware-20251021-1.fc43 amd-ucode-firmware-20251021-1.fc43
+sudo dnf -y downgrade amd-gpu-firmware-20251021-1.fc43 amd-ucode-firmware-20251021-1.fc43
 
 # Edit vdirsyncer google.py to make it work with gmail
 # sed -i 's!urn:ietf:wg:oauth:2.0:oob!http://127.0.0.1:8088!g' $(find /usr/lib -name google.py | grep vdirsyncer)
