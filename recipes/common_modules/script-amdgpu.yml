@@ -3,6 +3,5 @@
 type: script
 scripts:
   - amdgpu.sh
-  - workarounds.sh
   #- espanso.sh
   #- build-tuxedo.sh
