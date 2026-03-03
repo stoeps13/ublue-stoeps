@@ -1,13 +1,9 @@
 ---
-# image will be published to ghcr.io/<user>/<name>
 name: ublue-dirk-bluefin
-# description will be included in the image's metadata
 description: Bluefin DX image with downgraded amdgpu firmware
 
-# base-image: ghcr.io/ublue-os/silverblue-main
 base-image: ghcr.io/ublue-os/bluefin-dx
-# base-image: ghcr.io/brickman240/tuxedo-bluefin-dx
-image-version: latest
+image-version: stable
 
 modules:
   - from-file: common_modules/script-amdgpu.yml
