@@ -2,7 +2,7 @@
 name: Build Bluefin DX Image
 on:
   schedule:
-    - cron: "30 18 * * 0,2,4,6"
+    - cron: "30 18 * * 1,3,5"
   pull_request:
   workflow_dispatch:
 concurrency:
