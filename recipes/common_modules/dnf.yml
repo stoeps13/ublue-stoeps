@@ -25,7 +25,7 @@ install:
     - ghostty
     - guestfs-tools
     - kdump-tools
-    - kernel-6.16.8-200.fc42.x86_64
+    - kernel-headers
     - kmodtool
     - libvirt-daemon-config-network
     - libvirt-daemon-kvm
