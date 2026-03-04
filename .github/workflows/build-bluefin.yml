@@ -22,6 +22,7 @@ jobs:
       matrix:
         recipe:
           - ublue-bluefin-dx.yml
+          - ublue-bluefin-nvidia-dx.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.11
