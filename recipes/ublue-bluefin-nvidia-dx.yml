@@ -1,5 +1,5 @@
 ---
-name: ublue-dirk-bluefin
+name: ublue-dirk-bluefin-nvidia
 description: Bluefin DX image with downgraded amdgpu firmware
 
 base-image: ghcr.io/ublue-os/bluefin-dx-nvidia-open
