@@ -3,13 +3,9 @@
 type: dnf
 repos:
   cleanup: true
-
 install:
   skip-unavailable: true
   packages:
     - task
     - tasksh
     - taskopen
-
-remove:
-  packages:
