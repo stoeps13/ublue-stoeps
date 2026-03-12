@@ -6,6 +6,7 @@ repos:
 install:
   skip-unavailable: true
   packages:
+    - acpi
     - task
     - tasksh
     - taskopen
