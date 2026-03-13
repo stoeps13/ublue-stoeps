@@ -3,9 +3,6 @@
 type: dnf
 repos:
   cleanup: true
-  copr:
-    enable:
-      - eclipseo/espanso
 
 install:
   skip-unavailable: true
@@ -16,7 +13,6 @@ install:
     - edac-utils
     - edid-decode
     - efibootmgr
-    - espanso-wayland
     - fastfetch
     - fd-find
     - firewall-config
