@@ -5,7 +5,6 @@ repos:
   cleanup: true
   copr:
     enable:
-      - scottames/ghostty
       - eclipseo/espanso
 
 install:
@@ -22,7 +21,6 @@ install:
     - fd-find
     - firewall-config
     - gcc
-    - ghostty
     - guestfs-tools
     - kdump-tools
     - kmodtool

@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   bluebuild:
-    name: Build stoeps-fedora image
+    name: Build stoeps-albacore image
     runs-on: ubuntu-latest
     permissions:
       contents: read
