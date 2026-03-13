@@ -4,24 +4,13 @@ type: dnf
 install:
   packages:
     - dconf
-    - fedora-release-ostree-desktop
     - git
     - glib2-devel
     - gnome-tweaks
     - gnome-shell-extension-gsconnect
     - gnome-shell-extension-search-light
-    - gnome-shell-theme-yaru.noarch
-    - yaru-gtk2-theme.noarch
-    - yaru-gtk3-theme.noarch
-    - yaru-gtk4-theme.noarch
-    - yaru-gtksourceview-theme.noarch
-    - yaru-icon-theme.noarch
-    - yaru-sound-theme.noarch
-    - yaru-theme.noarch
     - libgda
     - libgda-sqlite
-    - libratbag-ratbagd
-    - nautilus-gsconnect
     - openssh-askpass
     - polkit
     - simple-scan
