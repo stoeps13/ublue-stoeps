@@ -30,6 +30,7 @@ install:
     - plymouth-plugin-script
     - podman-compose
     - podman-docker
+    - policycoreutils
     - powertop
     - python3-libvirt
     - python3-lxml
