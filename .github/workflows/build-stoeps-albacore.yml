@@ -1,8 +1,8 @@
 ---
-name: Build Silverblue Image
+name: Build Almalinux Image
 on:
   schedule:
-    - cron: "30 18 * * 0,2,4,6"
+    - cron: "30 20 * * 0,2,4,6"
   pull_request:
   workflow_dispatch:
 concurrency:
@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - ublue-silverblue.yml
+          - ublue-albacore-dx.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.11

@@ -1,13 +1,13 @@
 ---
 # image will be published to ghcr.io/<user>/<name>
-name: stoeps-ublue-silverblue
+name: stoeps-ublue-albacore
 # description will be included in the image's metadata
-description: My ublue image for my personal and working devices (based on ublue silverblue)
+description: My ublue image for my personal and working devices (based on TunaOS albacore)
 
 # base-image: ghcr.io/ublue-os/silverblue-main
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/tuna-os/albacore-dx
 # base-image: ghcr.io/brickman240/tuxedo-bluefin-dx
-image-version: 43
+image-version: main
 
 modules:
   - from-file: common_modules/files.yml
@@ -17,10 +17,8 @@ modules:
   - from-file: common_modules/gschema-overrides.yml
   - from-file: common_modules/gnome-extensions.yml
   - from-file: common_modules/dnf.yml
-  - from-file: common_modules/dnf-kernel.yml
   - from-file: common_modules/dnf-gnome.yml
   - from-file: common_modules/systemd.yml
   - from-file: common_modules/script.yml
-  - from-file: common_modules/script-amdgpu.yml
   - from-file: common_modules/initramfs.yml
   - type: signing

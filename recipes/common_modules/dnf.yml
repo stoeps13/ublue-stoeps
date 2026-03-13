@@ -67,15 +67,6 @@ install:
     - virt-viewer
     - zip
     - zsh
-    - amd-gpu-firmware-20251021-1.fc43
-    - amd-ucode-firmware-20251021-1.fc43
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.17.12/300.fc43/x86_64/kernel-6.17.12-300.fc43.x86_64.rpm
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.17.12/300.fc43/x86_64/kernel-core-6.17.12-300.fc43.x86_64.rpm
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.17.12/300.fc43/x86_64/kernel-modules-6.17.12-300.fc43.x86_64.rpm
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.17.12/300.fc43/x86_64/kernel-modules-core-6.17.12-300.fc43.x86_64.rpm
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.17.12/300.fc43/x86_64/kernel-modules-extra-6.17.12-300.fc43.x86_64.rpm
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.17.12/300.fc43/x86_64/kernel-devel-6.17.12-300.fc43.x86_64.rpm
-
     # group-install:
     #   with-optional: true
     #   packages:
