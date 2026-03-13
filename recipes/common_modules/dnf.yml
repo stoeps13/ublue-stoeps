@@ -67,11 +67,13 @@ install:
     - virt-viewer
     - zip
     - zsh
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.19.6/200.fc43/x86_64/kernel-6.19.6-200.fc43.x86_64.rpm
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.19.6/200.fc43/x86_64/kernel-core-6.19.6-200.fc43.x86_64.rpm
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.19.6/200.fc43/x86_64/kernel-modules-6.19.6-200.fc43.x86_64.rpm
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.19.6/200.fc43/x86_64/kernel-modules-core-6.19.6-200.fc43.x86_64.rpm
-    - https://kojipkgs.fedoraproject.org//packages/kernel/6.19.6/200.fc43/x86_64/kernel-devel-6.19.6-200.fc43.x86_64.rpm
+    - amd-gpu-firmware-20251021-1.fc43
+    - amd-ucode-firmware-20251021-1.fc43
+    - https://kojipkgs.fedoraproject.org//packages/kernel/6.16.12/200.fc42/x86_64/kernel-6.16.12-200.fc42.x86_64.rpm
+    - https://kojipkgs.fedoraproject.org//packages/kernel/6.16.12/200.fc42/x86_64/kernel-core-6.16.12-200.fc43.x86_64.rpm
+    - https://kojipkgs.fedoraproject.org//packages/kernel/6.16.12/200.fc42/x86_64/kernel-modules-6.16.12-200.fc43.x86_64.rpm
+    - https://kojipkgs.fedoraproject.org//packages/kernel/6.16.12/200.fc42/x86_64/kernel-modules-core-6.16.12-200.fc43.x86_64.rpm
+    - https://kojipkgs.fedoraproject.org//packages/kernel/6.16.12/200.fc42/x86_64/kernel-devel-6.16.12-200.fc43.x86_64.rpm
 
     # group-install:
     #   with-optional: true
