@@ -1,16 +1,11 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 type: dnf
-repos:
-  copr:
-    - ublue-os/staging
-    - scottames/ghostty
 install:
   packages:
     - dconf
     - fedora-release-ostree-desktop
     - git
-    - ghostty
     - glib2-devel
     - gnome-tweaks
     - gnome-shell-extension-gsconnect
