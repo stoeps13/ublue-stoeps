@@ -5,7 +5,6 @@ repos:
   cleanup: true
 
 install:
-  skip-unavailable: true
   packages:
     - binutils
     - crash
