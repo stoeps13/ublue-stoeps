@@ -20,6 +20,6 @@ modules:
   - from-file: common_modules/dnf-gnome.yml
   - from-file: common_modules/systemd.yml
   - from-file: common_modules/script.yml
-  - from-file: common_modules/amdgpu.sh  
+  - from-file: common_modules/script-amdgpu.sh  
   - from-file: common_modules/initramfs.yml
   - type: signing
