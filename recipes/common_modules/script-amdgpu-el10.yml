@@ -1,0 +1,7 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+type: script
+scripts:
+  - amdgpu-el10.sh
+  #- espanso.sh
+  #- build-tuxedo.sh
