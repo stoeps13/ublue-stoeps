@@ -43,7 +43,6 @@ install:
     - spice-glib
     - spice-gtk3
     - tailscale
-    - uupd
     - virt-install
     - virt-manager
     - virt-top
