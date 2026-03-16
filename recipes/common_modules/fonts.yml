@@ -9,9 +9,10 @@ fonts:
     - Hack
   google-fonts:
     - Fira Sans
+    - JetBrains Mono
     - Lato
-    - Source Sans 3
+    - Noto Sans Mono
+    - Open Sans
     - Roboto
     - Source Code Pro
-    - Open Sans
-    - Noto Sans Mono
+    - Source Sans 3
