@@ -6,7 +6,7 @@ repos:
 
 install:
   packages:
-    - acpi
+    - acpid
     - binutils
     - crash
     - curl
