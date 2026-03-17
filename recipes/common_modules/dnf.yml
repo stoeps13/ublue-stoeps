@@ -52,6 +52,7 @@ install:
     - virt-top
     - virt-v2v
     - virt-viewer
+    - wireguard-tools
     - zip
     - zsh
     # group-install:
