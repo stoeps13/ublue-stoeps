@@ -19,7 +19,6 @@ install:
     - gcc
     - guestfs-tools
     - kmodtool
-    - libvirt-clients
     - libvirt-daemon
     - libvirt-daemon-config-network
     - libvirt-daemon-kvm
@@ -38,7 +37,6 @@ install:
     - powertop
     - python3-libvirt
     - python3-lxml
-    - qemu
     - qemu-kvm
     - rasdaemon
     - rclone
