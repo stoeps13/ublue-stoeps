@@ -8,6 +8,7 @@ install:
   packages:
     - acpid
     - binutils
+    - bridge-utils
     - crash
     - curl
     - edac-utils
@@ -18,6 +19,8 @@ install:
     - gcc
     - guestfs-tools
     - kmodtool
+    - libvirt-clients
+    - libvirt-daemon
     - libvirt-daemon-config-network
     - libvirt-daemon-kvm
     - lm_sensors
@@ -35,6 +38,7 @@ install:
     - powertop
     - python3-libvirt
     - python3-lxml
+    - qemu
     - qemu-kvm
     - rasdaemon
     - rclone
@@ -45,6 +49,7 @@ install:
     - spice-gtk3
     - tailscale
     - virt-install
+    - virt-manager
     - virt-manager
     - virt-top
     - virt-v2v
