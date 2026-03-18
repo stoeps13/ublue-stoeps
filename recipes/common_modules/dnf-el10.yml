@@ -1,0 +1,52 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+type: dnf
+repos:
+  cleanup: true
+
+install:
+  packages:
+    - acpid
+    - binutils
+    - crash
+    - curl
+    - edac-utils
+    - efibootmgr
+    - fastfetch
+    - fd-find
+    - firewall-config
+    - gcc
+    - lm_sensors
+    - make
+    - nmap-ncat
+    - nss-tools
+    - nvme-cli
+    - pass
+    - podman-compose
+    - podman-docker
+    - policycoreutils
+    - powertop
+    - python3-lxml
+    - rclone
+    - setools-console
+    - setroubleshoot-plugins
+    - setroubleshoot-server
+    - spice-glib
+    - spice-gtk3
+    - tailscale
+    - wireguard-tools
+    - zip
+    - zsh
+    # group-install:
+    #   with-optional: true
+    #   packages:
+    #     - development-tools
+remove:
+  packages:
+    - toolbox
+    - docker-ce
+    - docker-ce-cli
+    - docker-ce
+    - docker-ce-rootless-extras
+    - docker-compose-plugin
+    - docker-buildx-plugin
