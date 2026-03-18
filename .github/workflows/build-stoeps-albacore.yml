@@ -1,5 +1,5 @@
 ---
-name: Build Almalinux Image
+name: Build Bluefin DX Image Stoeps
 on:
   schedule:
     - cron: "30 20 * * 0,2,4,6"
@@ -11,7 +11,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   bluebuild:
-    name: Build stoeps-albacore image
+    name: Build stoeps-bluefin image
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - ublue-albacore-dx.yml
+          - ublue-bluefin-stoeps-dx.yml
     steps:
       - name: Build Custom Image
         uses: blue-build/github-action@v1.11
