@@ -8,7 +8,6 @@ install:
     - glib2-devel
     - gnome-tweaks
     - gnome-shell-extension-gsconnect
-    - gnome-shell-extension-search-light
     - libgda
     - libgda-sqlite
     - openssh-askpass
