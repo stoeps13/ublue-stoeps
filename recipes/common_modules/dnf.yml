@@ -44,10 +44,14 @@ install:
     #     - development-tools
 remove:
   packages:
-    - toolbox
+    - docker-buildx-plugin
+    - docker-ce
     - docker-ce
     - docker-ce-cli
-    - docker-ce
     - docker-ce-rootless-extras
     - docker-compose-plugin
-    - docker-buildx-plugin
+    - kmod-zfs
+    - libzfs6
+    - libzpool6
+    - toolbox
+    - zfs
