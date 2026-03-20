@@ -1,6 +1,6 @@
 ---
 name: ublue-stoeps-bluefin
-description: Bluefin DX image with downgraded amdgpu firmware
+description: Stoeps' custom Bluefin DX image
 
 base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: stable

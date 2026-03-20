@@ -14,6 +14,11 @@ for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
   rm -f /etc/yum.repos.de/${i}
 done
 
+# Disable ZFS
+rm -f /usr/lib/udev/rules.d/90-zfs.rules \
+          /usr/lib/udev/rules.d/60-zvol.rules \
+          /usr/lib/udev/rules.d/69-vdev.rules \
+          /usr/lib/modules-load.d/zfs.conf
 # Set bootscreen
 # echo 'Set Plymouth default theme'
 # plymouth-set-default-theme stoeps
