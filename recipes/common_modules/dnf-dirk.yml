@@ -3,10 +3,15 @@
 type: dnf
 repos:
   cleanup: true
+  files:
+    - https://repository.mullvad.net/rpm/stable/mullvad.repo
+  keys:
+    - https://repository.mullvad.net/deb/mullvad-keyring.asc
 install:
   skip-unavailable: true
   packages:
     - acpi
+    - mullvad-vpn
     - task
     - tasksh
     - taskopen
