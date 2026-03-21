@@ -1,0 +1,8 @@
+---
+type: kargs
+arch: x86_64
+kargs:
+  - rd.blacklist=zfs
+  - rd.blacklist=spl
+  - amdgpu.dc=1
+  - amdgpu.psr=0

@@ -14,4 +14,5 @@ modules:
   - from-file: common_modules/fonts.yml
   - from-file: common_modules/script.yml
   - from-file: common_modules/systemd.yml
+  - from-file: common_modules/kargs.yml
   - type: signing
