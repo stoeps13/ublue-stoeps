@@ -15,4 +15,6 @@ modules:
   - from-file: common_modules/script.yml
   - from-file: common_modules/systemd.yml
   - from-file: common_modules/kargs.yml
+  - from-file: common_modules/script-amdgpu.yml
+  - from-file: common_modules/initramfs.yml
   - type: signing
