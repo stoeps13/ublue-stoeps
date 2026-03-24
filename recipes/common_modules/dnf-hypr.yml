@@ -10,6 +10,7 @@ repos:
 install:
   skip-unavailable: true
   packages:
+    - elephant
     - hypridle
     - hyprland
     - hyprland-contrib
