@@ -1,0 +1,12 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+type: dnf
+repos:
+  cleanup: true
+  copr:
+    - avengemedia/dms
+install:
+  skip-unavailable: true
+  packages:
+    - niri
+    - dms
