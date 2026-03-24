@@ -1,0 +1,29 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+type: dnf
+repos:
+  cleanup: true
+  copr:
+    - solopasha/hyprland
+    - markupstart/SwayOSD
+    - errornointernet/walker
+install:
+  skip-unavailable: true
+  packages:
+    - hypridle
+    - hyprland
+    - hyprland-contrib
+    - hyprland-plugins
+    - hyprland-qtutils
+    - hyprlock
+    - hyprpaper
+    - hyprpicker
+    - hyprshot
+    - mako
+    - pavucontrol
+    - pyprland
+    - swaybg
+    - swayosd
+    - walker
+    - waybar-git
+    - xdg-desktop-portal-hyprland
