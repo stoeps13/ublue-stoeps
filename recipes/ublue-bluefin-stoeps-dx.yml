@@ -10,13 +10,13 @@ modules:
   - from-file: common_modules/dnf.yml
   - from-file: common_modules/dnf-gnome.yml
   - from-file: common_modules/dnf-hypr.yml
-  - from-file: common_modules/dnf-niri.yml
+  # - from-file: common_modules/dnf-niri.yml
   - from-file: common_modules/gschema-overrides.yml
   - from-file: common_modules/gnome-extensions.yml
   - from-file: common_modules/fonts.yml
   - from-file: common_modules/script.yml
   - from-file: common_modules/systemd.yml
-  - from-file: common_modules/systemd-niri.yml
+  # - from-file: common_modules/systemd-niri.yml
   - from-file: common_modules/kargs.yml
   - from-file: common_modules/script-amdgpu.yml
   - from-file: common_modules/initramfs.yml
