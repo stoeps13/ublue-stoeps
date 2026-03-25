@@ -9,7 +9,7 @@ modules:
   - from-file: common_modules/files.yml
   - from-file: common_modules/dnf.yml
   - from-file: common_modules/dnf-gnome.yml
-  - from-file: common_modules/dnf-hypr.yml
+  # - from-file: common_modules/dnf-hypr.yml
   # - from-file: common_modules/dnf-niri.yml
   - from-file: common_modules/gschema-overrides.yml
   - from-file: common_modules/gnome-extensions.yml
