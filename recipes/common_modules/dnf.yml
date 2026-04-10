@@ -4,44 +4,6 @@ type: dnf
 repos:
   cleanup: true
 
-install:
-  skip-unavailable: true
-  packages:
-    - acpid
-    - binutils
-    - crash
-    - curl
-    - edac-utils
-    - efibootmgr
-    - fastfetch
-    - fd-find
-    - firewall-config
-    - gcc
-    - lm_sensors
-    - make
-    - nmap-ncat
-    - nss-tools
-    - nvme-cli
-    - pass
-    - podman-compose
-    - podman-docker
-    - policycoreutils
-    - powertop
-    - python3-lxml
-    - rclone
-    - setools-console
-    - setroubleshoot-plugins
-    - setroubleshoot-server
-    - spice-glib
-    - spice-gtk3
-    - tailscale
-    - wireguard-tools
-    - zip
-    - zsh
-    # group-install:
-    #   with-optional: true
-    #   packages:
-    #     - development-tools
 remove:
   packages:
     - docker-buildx-plugin
