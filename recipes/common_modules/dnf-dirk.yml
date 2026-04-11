@@ -7,15 +7,8 @@ repos:
     - https://repository.mullvad.net/rpm/stable/mullvad.repo
   keys:
     - https://repository.mullvad.net/deb/mullvad-keyring.asc
-  copr:
-    - eclipseo/espanso
 install:
   skip-unavailable: true
   packages:
     - acpi
-    - espanso
-    - espanso-wayland
     - mullvad-vpn
-    - task
-    - tasksh
-    - taskopen
