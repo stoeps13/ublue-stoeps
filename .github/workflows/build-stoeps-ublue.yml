@@ -1,5 +1,5 @@
 ---
-name: Build Silverblue Image
+name: Build Stoeps Bluefin Image
 on:
   schedule:
     - cron: "30 18 * * 0,2,4,6"
