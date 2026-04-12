@@ -1,0 +1,4 @@
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4]
+binding='<Super>Print'
+command="flatpak run be.alexandervanhee.gradia --screenshot=INTERACTIVE"
+name='Create screenshot and open gradia'

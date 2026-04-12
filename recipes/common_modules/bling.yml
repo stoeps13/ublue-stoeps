@@ -5,5 +5,5 @@ install:
   - dconf-update-service
   # - laptop # installs TLP and configures your system for laptop usage
   # - 1password # install 1Password (stable) and `op` CLI tool
-  - gnome-vrr # enables gnome-vrr for your image
+  # - gnome-vrr # enables gnome-vrr for your image
   # - flatpaksync # allows synchronization of user-installed flatpaks
