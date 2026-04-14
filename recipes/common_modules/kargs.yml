@@ -6,4 +6,4 @@ kargs:
   - rd.blacklist=spl
   - amdgpu.dc=1
   - amdgpu.psr=0
-  - amdgpu.dcdebugmask=0x10
+  - amdgpu.dcdebugmask=0x410
