@@ -4,6 +4,10 @@ type: dnf
 repos:
   cleanup: true
 
+install:
+  packages:
+    - acpi
+
 remove:
   packages:
     - docker-buildx-plugin
