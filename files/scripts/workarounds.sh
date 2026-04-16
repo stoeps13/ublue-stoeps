@@ -12,8 +12,10 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 # Update kernel
 echo "Starting Kernel Update"
 cd /tmp
-koji download-build --arch=x86_64 kernel-6.19.11-200.fc43
-dnf update kernel-*.rpm
+export KERNELVERSION=6.19.11-200.fc43
+koji download-build --arch=x86_64 kernel-${KERNELVERSION}
+dnf install ./kernel-${KERNELVERSION}.x86_64.rpm ./kernel-core-${KERNELVERSION}.x86_64.rpm ./kernel-modules-${KERNELVERSION}.x86_64.rpm
+rm -rf kernel*.rpm
 
 # Clean up repos, everything is on the image so we don't need them
 for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
