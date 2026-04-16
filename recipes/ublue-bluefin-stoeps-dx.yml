@@ -19,6 +19,7 @@ modules:
   # - from-file: common_modules/systemd-niri.yml
   - from-file: common_modules/kargs.yml
   # - from-file: common_modules/script-amdgpu.yml
+  - from-file: common_modules/workarounds.yml
   - from-file: common_modules/initramfs.yml
   - from-file: common_modules/bling.yml
   - type: signing

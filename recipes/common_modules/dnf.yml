@@ -17,6 +17,7 @@ remove:
     - docker-ce-rootless-extras
     - docker-compose-plugin
     - kmod-zfs
+    - koji
     - libzfs6
     - libzpool6
     - toolbox
