@@ -14,8 +14,8 @@ echo "Starting Kernel Update"
 cd /tmp
 export KERNELVERSION=6.19.11-200.fc43
 koji download-build --arch=x86_64 kernel-${KERNELVERSION}
-dnf install --best --allowerasing ./kernel*${KERNELVERSION}.x86_64.rpm 
-rm -rf kernel*.rpm
+dnf install --best --allowerasing ./*${KERNELVERSION}.x86_64.rpm 
+rm -rf *.rpm
 
 # Clean up repos, everything is on the image so we don't need them
 for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
