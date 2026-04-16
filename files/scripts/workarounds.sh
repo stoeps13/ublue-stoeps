@@ -14,7 +14,7 @@ echo "Starting Kernel Update"
 cd /tmp
 export KERNELVERSION=6.19.11-200.fc43
 koji download-build --arch=x86_64 kernel-${KERNELVERSION}
-dnf update --best --allowerasing ./*${KERNELVERSION}.x86_64.rpm 
+dnf update -y --best --allowerasing ./*${KERNELVERSION}.x86_64.rpm 
 rm -rf *.rpm
 
 # Clean up repos, everything is on the image so we don't need them
