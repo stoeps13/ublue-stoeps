@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/bash
 
 set -oue pipefail
 echo 'This is the workaround shell script'
@@ -13,13 +13,16 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 echo "Starting Kernel Update"
 cd /tmp
 export KERNELVERSION=6.19.11-200.fc43
-koji download-build --arch=x86_64 kernel-${KERNELVERSION}
-dnf update -y --best --allowerasing ./*${KERNELVERSION}.x86_64.rpm 
-rm -rf *.rpm
+koji download-build --arch=x86_64 kernel-${KERNELVERSION} \
+  && rm ./*debug*.rpm \
+  && rm ./*uki*.rpm \
+  && dnf update -y --best --allowerasing ./*${KERNELVERSION}.x86_64.rpm \
+  && rm -rf ./*.rpm
 
 # Clean up repos, everything is on the image so we don't need them
-for i in $(ls /etc/yum.repos.d/ | grep -v '^fedora' | grep -v rpmfusion); do
-  rm -f /etc/yum.repos.de/${i}
+for f in /etc/yum.repos.d/*; do
+  [[ "$f" == *fedora* || "$f" == *rpmfusion* ]] && continue
+  rm -f "$f"
 done
 
 # Disable ZFS
