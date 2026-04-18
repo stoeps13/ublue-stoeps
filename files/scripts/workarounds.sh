@@ -17,7 +17,7 @@ export KERNELVERSION=6.17.8-300.fc43
 koji download-build --arch=x86_64 kernel-${KERNELVERSION} \
   && rm ./*debug*.rpm \
   && rm ./*uki*.rpm \
-  && dnf update -y --best --allowerasing ./*${KERNELVERSION}.x86_64.rpm \
+  && dnf downgrade -y --best --allowerasing ./*${KERNELVERSION}.x86_64.rpm \
   && rm -rf ./*.rpm
 
 # Clean up repos, everything is on the image so we don't need them
