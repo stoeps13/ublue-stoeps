@@ -12,7 +12,8 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 # Update kernel
 echo "Starting Kernel Update"
 cd /tmp
-export KERNELVERSION=6.19.12-200.fc43
+# export KERNELVERSION=6.19.12-200.fc43
+export KERNELVERSION=6.17.8-300.fc43
 koji download-build --arch=x86_64 kernel-${KERNELVERSION} \
   && rm ./*debug*.rpm \
   && rm ./*uki*.rpm \
