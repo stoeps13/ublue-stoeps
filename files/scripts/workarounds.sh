@@ -12,14 +12,8 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 # Update kernel
 echo "Starting Kernel Update"
 cd /tmp
-FC_VERSION=fc43
-BUILD_VERSION=20250917
-BUILD_NUM=2
 # Downgrad firmware
-curl -OLk https://kojipkgs.fedoraproject.org/packages/linux-firmware/${BUILD_VERSION}/${BUILD_NUM}.${FC_VERSION}/noarch/amd-gpu-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm
-curl -OLk https://kojipkgs.fedoraproject.org/packages/linux-firmware/${BUILD_VERSION}/${BUILD_NUM}.${FC_VERSION}/noarch/amd-ucode-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm
-curl -OLk https://kojipkgs.fedoraproject.org/packages/linux-firmware/${BUILD_VERSION}/${BUILD_NUM}.${FC_VERSION}/noarch/linux-firmware-whence-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm
-dnf downgrade -y /tmp/amd-ucode-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm /tmp/amd-gpu-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm
+dnf downgrade amd-gpu-firmware-20251021-1.fc43 amd-ucode-firmware-20251021-1.fc43
 
 # export KERNELVERSION=6.19.12-200.fc43
 export KERNELVERSION=6.17.8-300.fc43
