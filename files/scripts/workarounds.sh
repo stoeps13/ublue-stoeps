@@ -13,7 +13,7 @@ ln -sf /usr/bin/ld.bfd /etc/alternatives/ld && ln -sf /etc/alternatives/ld /usr/
 echo "Starting Kernel Update"
 cd /tmp
 # Downgrad firmware
-dnf downgrade amd-gpu-firmware-20251021-1.fc43 amd-ucode-firmware-20251021-1.fc43
+dnf downgrade -y amd-gpu-firmware-20251021-1.fc43 amd-ucode-firmware-20251021-1.fc43
 
 # export KERNELVERSION=6.19.12-200.fc43
 export KERNELVERSION=6.17.8-300.fc43
