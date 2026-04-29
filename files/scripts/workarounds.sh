@@ -23,7 +23,7 @@ dnf downgrade -y /tmp/amd-ucode-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERS
 
 # export KERNELVERSION=6.19.12-200.fc43
 export KERNELVERSION=6.17.8-300.fc43
-koji download-build --arch=x86_64 kernel-${KERNELVERSION} \
+koji download-build --quiet --arch=x86_64 kernel-${KERNELVERSION} \
   && rm ./*debug*.rpm \
   && rm ./*uki*.rpm \
   && dnf downgrade -y --best --allowerasing ./*${KERNELVERSION}.x86_64.rpm \
