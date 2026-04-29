@@ -2,6 +2,4 @@
 type: kargs
 arch: x86_64
 kargs:
-  - rd.blacklist=zfs
-  - rd.blacklist=spl
-  - amdgpu.dcdebugmask=0x410
+  - amdgpu.dcdebugmask=0x10
