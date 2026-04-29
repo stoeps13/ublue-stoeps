@@ -19,7 +19,7 @@ BUILD_NUM=2
 curl -OLk https://kojipkgs.fedoraproject.org/packages/linux-firmware/${BUILD_VERSION}/${BUILD_NUM}.${FC_VERSION}/noarch/amd-gpu-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm
 curl -OLk https://kojipkgs.fedoraproject.org/packages/linux-firmware/${BUILD_VERSION}/${BUILD_NUM}.${FC_VERSION}/noarch/amd-ucode-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm
 curl -OLk https://kojipkgs.fedoraproject.org/packages/linux-firmware/${BUILD_VERSION}/${BUILD_NUM}.${FC_VERSION}/noarch/linux-firmware-whence-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm
-dnf downgrade -y /tmp/amd-ucode-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm /tmp/amd-gpu-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm /tmp/linux-firmware-whence-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm
+dnf downgrade -y /tmp/amd-ucode-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm /tmp/amd-gpu-firmware-${BUILD_VERSION}-${BUILD_NUM}.${FC_VERSION}.noarch.rpm
 
 # export KERNELVERSION=6.19.12-200.fc43
 export KERNELVERSION=6.17.8-300.fc43
