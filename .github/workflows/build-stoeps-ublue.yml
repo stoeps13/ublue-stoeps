@@ -1,8 +1,7 @@
 ---
 name: Build Stoeps Bluefin Image
 on:
-  schedule:
-    - cron: "30 18 * * 0,2,4,6"
+  # schedule:
   pull_request:
   workflow_dispatch:
 concurrency:
