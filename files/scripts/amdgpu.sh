@@ -8,7 +8,8 @@ cd /tmp
 curl -OLk https://kojipkgs.fedoraproject.org//packages/linux-firmware/20250509/1.fc43/noarch/amd-ucode-firmware-20250509-1.fc43.noarch.rpm
 curl -OLk https://kojipkgs.fedoraproject.org//packages/linux-firmware/20250509/1.fc43/noarch/amd-gpu-firmware-20250509-1.fc43.noarch.rpm
 # sudo dnf -y downgrade amd-gpu-firmware-20250509-1.fc43 amd-ucode-firmware-20250509-1.fc43
-dnf downgrade -y ./amd-gpu-firmware.*.rpm ./amd-ucode-firmware.*.rpm
+dnf downgrade -y /tmp/amd-gpu-firmware.*.rpm /tmp/amd-ucode-firmware.*.rpm
+rm /tmp/*.rpm
 
 # Clean up repos, everything is on the image so we don't need them
 for f in /etc/yum.repos.d/*; do
